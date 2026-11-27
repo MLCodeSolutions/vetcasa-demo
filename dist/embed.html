@@ -4,40 +4,13 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>VetCasa</title>
-<style>
-html,body{margin:0;height:100%;background:#f8f3ee}
-body{display:grid;place-items:center;overflow:hidden;font-family:system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;color:#2b1a1b;background:radial-gradient(620px 420px at 50% 38%,rgba(110,18,27,.10),transparent 70%),radial-gradient(380px 280px at 50% 62%,rgba(242,215,201,.55),transparent 70%),#f8f3ee}
-body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(rgba(110,18,27,.05) 1px,transparent 1px),linear-gradient(90deg,rgba(110,18,27,.05) 1px,transparent 1px);background-size:64px 64px;-webkit-mask-image:radial-gradient(70% 60% at 50% 50%,#000 30%,transparent 80%);mask-image:radial-gradient(70% 60% at 50% 50%,#000 30%,transparent 80%);pointer-events:none}
-#app-fallback{position:relative;z-index:1;display:flex;flex-direction:column;align-items:center;gap:16px;padding:24px;text-align:center}
-#app-fallback .boot-mark{display:grid;place-items:center;width:112px;height:112px;border-radius:50%;background:linear-gradient(150deg,rgba(255,252,248,.96),rgba(242,215,201,.9));border:1px solid rgba(110,18,27,.18);box-shadow:0 0 50px rgba(110,18,27,.16),inset 0 0 30px rgba(255,255,255,.35)}
-#app-fallback .boot-mark svg{display:block;width:80px;height:80px;filter:drop-shadow(0 2px 5px rgba(43,26,27,.18))}
-#app-fallback p{margin:0;font-size:16px;font-weight:600;letter-spacing:.02em}
-#app-fallback small{font-size:11px;font-weight:700;letter-spacing:.28em;text-transform:uppercase;color:#813538}
-#app-fallback a{color:#6e121b;font-weight:600}
-</style>
+<style>html,body{margin:0;height:100%;background:#f8f3ee}#app-fallback{font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:#6e121b;padding:24px;text-align:center}#app-fallback a{color:#6e121b}</style>
 </head>
 <body>
-<div id="app-fallback">
-  <div class="boot-mark">
-    <svg viewBox="0 0 64 64" width="80" height="80" aria-hidden="true">
-      <circle cx="32" cy="32" r="32" fill="#6e121b"/>
-      <path d="M14 31.5 32 16l18 15.5" fill="none" stroke="#f8f3ee" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
-      <path d="M18.5 31.5V48h27V31.5" fill="none" stroke="#f2d7c9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>
-      <g fill="#f8f3ee">
-        <ellipse cx="32" cy="41.6" rx="6.1" ry="5.1"/>
-        <circle cx="24.6" cy="35.4" r="2.5"/>
-        <circle cx="29.5" cy="32.6" r="2.5"/>
-        <circle cx="34.5" cy="32.6" r="2.5"/>
-        <circle cx="39.4" cy="35.4" r="2.5"/>
-      </g>
-    </svg>
-  </div>
-  <p>Carregando<span aria-hidden="true">...</span></p>
-  <small>VetCasa</small>
-</div>
+<p id="app-fallback">Carregando o site…</p>
 <script>
 (function () {
-  var url = "https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@ca99ce86ed9a3721cc1c3ae99c20837756671cfb/dist/index.html";
+  var url = "https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/index.html";
   var fallback = document.getElementById('app-fallback');
   var timer = setTimeout(showFallback, 8000);
 
@@ -60,13 +33,12 @@ body::before{content:"";position:fixed;inset:0;background-image:linear-gradient(
     .then(function (html) {
       clearTimeout(timer);
       document.open();
-      window.__vcBootAt = performance.now();
       document.write(html);
       document.close();
     })
     .catch(showFallback);
 }());
 </script>
-<noscript><p><a href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@ca99ce86ed9a3721cc1c3ae99c20837756671cfb/dist/index.html" target="_blank" rel="noopener noreferrer">Abrir o site</a></p></noscript>
+<noscript><p><a href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/index.html" target="_blank" rel="noopener noreferrer">Abrir o site</a></p></noscript>
 </body>
 </html>

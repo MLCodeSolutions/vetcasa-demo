@@ -16,14 +16,14 @@ window.SITE = {
   domain: 'vetcasa.com.br'
 };
 
-/* Modo leve: celular pequeno, economia de dados ou 2G. */
+/* Modo leve: só economia de dados real (saveData, 2G ou prefers-reduced-data).
+   Celulares normais mantêm reveal, marquee e digitação. */
 (function () {
   try {
     var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
     var lite = conn.saveData === true ||
       /(^|-)2g$/.test(conn.effectiveType || '') ||
-      (window.matchMedia && window.matchMedia('(prefers-reduced-data: reduce)').matches) ||
-      window.innerWidth < 600;
+      (window.matchMedia && window.matchMedia('(prefers-reduced-data: reduce)').matches);
 
     if (lite) document.documentElement.classList.add('is-lite');
   } catch (error) {
@@ -873,54 +873,67 @@ window.SITE = {
     updateHeader();
   }
 
-  /* ---------- Reveals: respeitar movimento reduzido ---------- */
+  /* ---------- Reveals: começam depois do boot ---------- */
 
   if (reduceMotion) return;
   if (!('IntersectionObserver' in window)) return;
 
   var targets = document.querySelectorAll('[data-reveal]');
   var groups = document.querySelectorAll('[data-reveal-group]');
+  var revealsStarted = false;
 
-  Array.prototype.forEach.call(groups, function (group) {
-    var step = parseInt(group.getAttribute('data-reveal-group'), 10);
-    if (!step || step < 0) step = 70;
+  function initReveals() {
+    if (revealsStarted) return;
+    revealsStarted = true;
 
-    var index = 0;
+    Array.prototype.forEach.call(groups, function (group) {
+      var step = parseInt(group.getAttribute('data-reveal-group'), 10);
+      if (!step || step < 0) step = 70;
 
-    Array.prototype.forEach.call(group.children, function (child) {
-      if (!child.hasAttribute('data-reveal')) return;
+      var index = 0;
 
-      if (!child.hasAttribute('data-reveal-delay')) {
-        child.style.setProperty('--reveal-delay', Math.min(index * step, 350) + 'ms');
+      Array.prototype.forEach.call(group.children, function (child) {
+        if (!child.hasAttribute('data-reveal')) return;
+
+        if (!child.hasAttribute('data-reveal-delay')) {
+          child.style.setProperty('--reveal-delay', Math.min(index * step, 350) + 'ms');
+        }
+
+        index += 1;
+      });
+    });
+
+    Array.prototype.forEach.call(targets, function (target) {
+      var delay = target.getAttribute('data-reveal-delay');
+
+      if (delay !== null && delay !== '') {
+        var parsed = parseInt(delay, 10);
+        if (!isNaN(parsed)) target.style.setProperty('--reveal-delay', parsed + 'ms');
       }
-
-      index += 1;
     });
-  });
 
-  Array.prototype.forEach.call(targets, function (target) {
-    var delay = target.getAttribute('data-reveal-delay');
-
-    if (delay !== null && delay !== '') {
-      var parsed = parseInt(delay, 10);
-      if (!isNaN(parsed)) target.style.setProperty('--reveal-delay', parsed + 'ms');
-    }
-  });
-
-  var revealObserver = new IntersectionObserver(function (entries) {
-    entries.forEach(function (entry) {
-      if (!entry.isIntersecting) return;
-      entry.target.classList.add('is-in');
-      revealObserver.unobserve(entry.target);
+    var revealObserver = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        entry.target.classList.add('is-in');
+        revealObserver.unobserve(entry.target);
+      });
+    }, {
+      threshold: 0,
+      rootMargin: '0px 0px -32px 0px'
     });
-  }, {
-    threshold: 0,
-    rootMargin: '0px 0px -32px 0px'
-  });
 
-  Array.prototype.forEach.call(targets, function (target) {
-    revealObserver.observe(target);
-  });
+    Array.prototype.forEach.call(targets, function (target) {
+      revealObserver.observe(target);
+    });
+  }
+
+  if (document.documentElement.classList.contains('is-complete')) {
+    initReveals();
+  } else {
+    window.addEventListener('site:ready', initReveals, { once: true });
+    setTimeout(initReveals, 3000);
+  }
 }());
 
 /* app.js */

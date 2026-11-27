@@ -3,8 +3,8 @@
   "repo": "vetcasa-demo",
   "tag": "a930cdce5788f86855364bf047227c2a577d0e21",
   "base": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/",
-  "generatedAt": "2026-11-27T00:45:51.428Z",
-  "totalBytes": 983699,
+  "generatedAt": "2026-11-27T01:26:27.348Z",
+  "totalBytes": 984331,
   "files": [
     {
       "path": "assets/docs/coprofagia.pdf",
@@ -262,7 +262,7 @@
       "path": "dist/app.js",
       "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/app.js",
       "mime": "text/javascript; charset=utf-8",
-      "bytes": 30102
+      "bytes": 30544
     },
     {
       "path": "dist/embed.html",
@@ -274,13 +274,13 @@
       "path": "dist/index-external.html",
       "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/index-external.html",
       "mime": "text/html; charset=utf-8",
-      "bytes": 62023
+      "bytes": 61897
     },
     {
       "path": "dist/index.html",
       "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/index.html",
       "mime": "text/html; charset=utf-8",
-      "bytes": 229406
+      "bytes": 229722
     }
   ]
 }

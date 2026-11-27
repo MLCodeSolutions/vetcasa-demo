@@ -15,14 +15,14 @@ window.SITE = {
   domain: 'vetcasa.com.br'
 };
 
-/* Modo leve: celular pequeno, economia de dados ou 2G. */
+/* Modo leve: só economia de dados real (saveData, 2G ou prefers-reduced-data).
+   Celulares normais mantêm reveal, marquee e digitação. */
 (function () {
   try {
     var conn = navigator.connection || navigator.mozConnection || navigator.webkitConnection || {};
     var lite = conn.saveData === true ||
       /(^|-)2g$/.test(conn.effectiveType || '') ||
-      (window.matchMedia && window.matchMedia('(prefers-reduced-data: reduce)').matches) ||
-      window.innerWidth < 600;
+      (window.matchMedia && window.matchMedia('(prefers-reduced-data: reduce)').matches);
 
     if (lite) document.documentElement.classList.add('is-lite');
   } catch (error) {
