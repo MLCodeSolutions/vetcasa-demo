@@ -129,16 +129,9 @@ window.SITE = {
     setTimeout(tick, 500);
   }
 
-  document.querySelectorAll('[data-sc-type]').forEach(typeWriter);
-
   /* ---------- Contadores ---------- */
 
   var counters = document.querySelectorAll('[data-sc-count]');
-
-  counters.forEach(function (el) {
-    var parts = (el.getAttribute('data-sc-count') || '0,0,').split(',');
-    el.textContent = '0\u20130' + (parts[2] || '');
-  });
 
   function runCounter(el) {
     var parts = (el.getAttribute('data-sc-count') || '0,0,').split(',');
@@ -161,20 +154,43 @@ window.SITE = {
     })(start);
   }
 
-  if ('IntersectionObserver' in window) {
-    var counterObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        counterObserver.unobserve(entry.target);
-        runCounter(entry.target);
-      });
-    }, { threshold: 0.4 });
+  /* ---------- Hero: só começa depois do boot ---------- */
+
+  var heroStarted = false;
+
+  function startHero() {
+    if (heroStarted) return;
+    heroStarted = true;
+
+    document.querySelectorAll('[data-sc-type]').forEach(typeWriter);
 
     counters.forEach(function (el) {
-      counterObserver.observe(el);
+      var parts = (el.getAttribute('data-sc-count') || '0,0,').split(',');
+      el.textContent = '0\u20130' + (parts[2] || '');
     });
+
+    if ('IntersectionObserver' in window) {
+      var counterObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          counterObserver.unobserve(entry.target);
+          runCounter(entry.target);
+        });
+      }, { threshold: 0.4 });
+
+      counters.forEach(function (el) {
+        counterObserver.observe(el);
+      });
+    } else {
+      counters.forEach(runCounter);
+    }
+  }
+
+  if (document.documentElement.classList.contains('is-complete')) {
+    startHero();
   } else {
-    counters.forEach(runCounter);
+    window.addEventListener('site:ready', startHero, { once: true });
+    setTimeout(startHero, 3000);
   }
 
   /* ---------- Slideshow de cenas animadas ---------- */
@@ -928,35 +944,55 @@ window.SITE = {
     }
   }
 
-  /* ---------- Preloader: sai no load ou em 3 s ---------- */
+  /* ---------- Boot de entrada (padrão Amanda) ---------- */
 
-  var preloader = document.querySelector('[data-preloader]');
+  var boot = document.getElementById('vc-boot');
+  var bootDone = false;
+  var bootFade = reduceMotion ? 0 : 320;
 
-  if (preloader) {
-    var hidden = false;
+  function finishBoot() {
+    if (bootDone) return;
+    bootDone = true;
+    document.documentElement.classList.add('is-ready');
 
-    function hidePreloader() {
-      if (hidden) return;
-      hidden = true;
-      preloader.classList.add('is-done');
+    setTimeout(function () {
+      document.documentElement.classList.add('is-complete');
+      try {
+        window.dispatchEvent(new Event('site:ready'));
+      } catch (error) {}
+
       setTimeout(function () {
-        if (preloader.parentNode) preloader.parentNode.removeChild(preloader);
-      }, 450);
-    }
-
-    if (reduceMotion) {
-      hidePreloader();
-    } else {
-      if (document.readyState === 'complete') {
-        setTimeout(hidePreloader, 200);
-      } else {
-        window.addEventListener('load', function () {
-          setTimeout(hidePreloader, 200);
-        });
-      }
-      setTimeout(hidePreloader, 3000);
-    }
+        if (boot && boot.parentNode) boot.parentNode.removeChild(boot);
+      }, 700);
+    }, bootFade);
   }
+
+  function scheduleBoot() {
+    if (bootDone) return;
+    var min = reduceMotion ? 500 : 1000;
+    var wait = Math.max(0, min - performance.now());
+    setTimeout(finishBoot, wait);
+  }
+
+  var pageLoaded = new Promise(function (resolve) {
+    if (document.readyState === 'complete') {
+      resolve();
+    } else {
+      window.addEventListener('load', resolve, { once: true });
+    }
+  });
+
+  var fontsLoaded = document.fonts && document.fonts.ready
+    ? Promise.race([
+        document.fonts.ready,
+        new Promise(function (resolve) {
+          setTimeout(resolve, 1200);
+        })
+      ])
+    : Promise.resolve();
+
+  Promise.all([pageLoaded, fontsLoaded]).then(scheduleBoot);
+  setTimeout(finishBoot, 3000);
 
   /* ---------- Voltar ao topo ---------- */
 

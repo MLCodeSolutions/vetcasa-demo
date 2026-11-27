@@ -32,7 +32,6 @@
     })
     .then(function (html) {
       clearTimeout(timer);
-      html = html.split("https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/").join("https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/");
       document.open();
       document.write(html);
       document.close();

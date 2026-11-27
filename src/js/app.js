@@ -18,35 +18,55 @@
     }
   }
 
-  /* ---------- Preloader: sai no load ou em 3 s ---------- */
+  /* ---------- Boot de entrada (padrão Amanda) ---------- */
 
-  var preloader = document.querySelector('[data-preloader]');
+  var boot = document.getElementById('vc-boot');
+  var bootDone = false;
+  var bootFade = reduceMotion ? 0 : 320;
 
-  if (preloader) {
-    var hidden = false;
+  function finishBoot() {
+    if (bootDone) return;
+    bootDone = true;
+    document.documentElement.classList.add('is-ready');
 
-    function hidePreloader() {
-      if (hidden) return;
-      hidden = true;
-      preloader.classList.add('is-done');
+    setTimeout(function () {
+      document.documentElement.classList.add('is-complete');
+      try {
+        window.dispatchEvent(new Event('site:ready'));
+      } catch (error) {}
+
       setTimeout(function () {
-        if (preloader.parentNode) preloader.parentNode.removeChild(preloader);
-      }, 450);
-    }
-
-    if (reduceMotion) {
-      hidePreloader();
-    } else {
-      if (document.readyState === 'complete') {
-        setTimeout(hidePreloader, 200);
-      } else {
-        window.addEventListener('load', function () {
-          setTimeout(hidePreloader, 200);
-        });
-      }
-      setTimeout(hidePreloader, 3000);
-    }
+        if (boot && boot.parentNode) boot.parentNode.removeChild(boot);
+      }, 700);
+    }, bootFade);
   }
+
+  function scheduleBoot() {
+    if (bootDone) return;
+    var min = reduceMotion ? 500 : 1000;
+    var wait = Math.max(0, min - performance.now());
+    setTimeout(finishBoot, wait);
+  }
+
+  var pageLoaded = new Promise(function (resolve) {
+    if (document.readyState === 'complete') {
+      resolve();
+    } else {
+      window.addEventListener('load', resolve, { once: true });
+    }
+  });
+
+  var fontsLoaded = document.fonts && document.fonts.ready
+    ? Promise.race([
+        document.fonts.ready,
+        new Promise(function (resolve) {
+          setTimeout(resolve, 1200);
+        })
+      ])
+    : Promise.resolve();
+
+  Promise.all([pageLoaded, fontsLoaded]).then(scheduleBoot);
+  setTimeout(finishBoot, 3000);
 
   /* ---------- Voltar ao topo ---------- */
 

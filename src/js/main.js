@@ -95,16 +95,9 @@
     setTimeout(tick, 500);
   }
 
-  document.querySelectorAll('[data-sc-type]').forEach(typeWriter);
-
   /* ---------- Contadores ---------- */
 
   var counters = document.querySelectorAll('[data-sc-count]');
-
-  counters.forEach(function (el) {
-    var parts = (el.getAttribute('data-sc-count') || '0,0,').split(',');
-    el.textContent = '0\u20130' + (parts[2] || '');
-  });
 
   function runCounter(el) {
     var parts = (el.getAttribute('data-sc-count') || '0,0,').split(',');
@@ -127,20 +120,43 @@
     })(start);
   }
 
-  if ('IntersectionObserver' in window) {
-    var counterObserver = new IntersectionObserver(function (entries) {
-      entries.forEach(function (entry) {
-        if (!entry.isIntersecting) return;
-        counterObserver.unobserve(entry.target);
-        runCounter(entry.target);
-      });
-    }, { threshold: 0.4 });
+  /* ---------- Hero: só começa depois do boot ---------- */
+
+  var heroStarted = false;
+
+  function startHero() {
+    if (heroStarted) return;
+    heroStarted = true;
+
+    document.querySelectorAll('[data-sc-type]').forEach(typeWriter);
 
     counters.forEach(function (el) {
-      counterObserver.observe(el);
+      var parts = (el.getAttribute('data-sc-count') || '0,0,').split(',');
+      el.textContent = '0\u20130' + (parts[2] || '');
     });
+
+    if ('IntersectionObserver' in window) {
+      var counterObserver = new IntersectionObserver(function (entries) {
+        entries.forEach(function (entry) {
+          if (!entry.isIntersecting) return;
+          counterObserver.unobserve(entry.target);
+          runCounter(entry.target);
+        });
+      }, { threshold: 0.4 });
+
+      counters.forEach(function (el) {
+        counterObserver.observe(el);
+      });
+    } else {
+      counters.forEach(runCounter);
+    }
+  }
+
+  if (document.documentElement.classList.contains('is-complete')) {
+    startHero();
   } else {
-    counters.forEach(runCounter);
+    window.addEventListener('site:ready', startHero, { once: true });
+    setTimeout(startHero, 3000);
   }
 
   /* ---------- Slideshow de cenas animadas ---------- */

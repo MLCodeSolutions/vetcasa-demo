@@ -35,11 +35,169 @@
   <link rel="stylesheet" href="css/booking.css">
   <link rel="stylesheet" href="css/motion.css">
   <link rel="stylesheet" href="css/app.css">
+
+  <style data-vc-boot>
+    #vc-boot {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      overscroll-behavior: contain;
+      background:
+        radial-gradient(620px 420px at 50% 38%, rgba(110, 18, 27, 0.10), transparent 70%),
+        radial-gradient(380px 280px at 50% 62%, rgba(242, 215, 201, 0.55), transparent 70%),
+        var(--cream, #f8f3ee);
+      color: var(--ink, #2b1a1b);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      text-align: center;
+      transition: opacity 0.35s ease, visibility 0s 0.35s;
+      animation: vc-boot-fallback 0.3s ease 3s forwards;
+    }
+
+    #vc-boot::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(110, 18, 27, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(110, 18, 27, 0.05) 1px, transparent 1px);
+      background-size: 64px 64px;
+      -webkit-mask-image: radial-gradient(70% 60% at 50% 50%, #000 30%, transparent 80%);
+      mask-image: radial-gradient(70% 60% at 50% 50%, #000 30%, transparent 80%);
+      pointer-events: none;
+    }
+
+    #vc-boot .vc-boot__inner {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      transform: translateY(-2px);
+    }
+
+    #vc-boot .vc-boot__mark {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      background: linear-gradient(150deg, rgba(255, 252, 248, 0.96), rgba(242, 215, 201, 0.9));
+      border: 1px solid rgba(110, 18, 27, 0.18);
+      box-shadow: 0 0 50px rgba(110, 18, 27, 0.16), inset 0 0 30px rgba(255, 255, 255, 0.35);
+    }
+
+    #vc-boot .vc-boot__logo {
+      display: block;
+      width: 80px;
+      height: auto;
+      filter: drop-shadow(0 2px 5px rgba(43, 26, 27, 0.18));
+    }
+
+    #vc-boot .vc-boot__ring {
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      border: 2px solid rgba(110, 18, 27, 0.14);
+      border-top-color: #c08a3e;
+      border-right-color: var(--wine, #6e121b);
+      animation: vc-boot-spin 1.1s linear infinite;
+    }
+
+    #vc-boot .vc-boot__ring::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      margin-left: -4px;
+      border-radius: 50%;
+      background: #c08a3e;
+      box-shadow: 0 0 12px #c08a3e;
+    }
+
+    #vc-boot .vc-boot__text {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--ink, #2b1a1b);
+    }
+
+    #vc-boot .vc-boot__dots {
+      display: inline-block;
+      width: 1.4em;
+      text-align: left;
+      animation: vc-boot-dots 1.4s steps(4, end) infinite;
+    }
+
+    #vc-boot .vc-boot__brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--wine-soft, #813538);
+    }
+
+    @keyframes vc-boot-spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes vc-boot-dots {
+      0% { clip-path: inset(0 100% 0 0); }
+      25% { clip-path: inset(0 75% 0 0); }
+      50% { clip-path: inset(0 50% 0 0); }
+      75% { clip-path: inset(0 25% 0 0); }
+      100% { clip-path: inset(0 0 0 0); }
+    }
+
+    @keyframes vc-boot-fallback {
+      to { opacity: 0; visibility: hidden; pointer-events: none; }
+    }
+
+    html.is-ready #vc-boot {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      animation: none !important;
+    }
+
+    html.is-ready #vc-boot * { animation: none !important; }
+
+    html.is-lite #vc-boot .vc-boot__ring,
+    html.is-lite #vc-boot .vc-boot__dots {
+      animation: none !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #vc-boot { transition: none; }
+      #vc-boot .vc-boot__ring,
+      #vc-boot .vc-boot__dots { animation: none !important; }
+      #vc-boot .vc-boot__dots { clip-path: none; }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="app-preloader" data-preloader aria-hidden="true"><span class="app-preloader__bar"></span></div>
-  <noscript><style>[data-preloader]{display:none}</style></noscript>
+  <div id="vc-boot" role="status" aria-live="polite" aria-label="Carregando o site">
+    <div class="vc-boot__inner">
+      <div class="vc-boot__mark" aria-hidden="true">
+        <img class="vc-boot__logo" src="../assets/img/favicon.svg" alt="" width="64" height="64">
+        <i class="vc-boot__ring"></i>
+      </div>
+      <p class="vc-boot__text">Carregando<span class="vc-boot__dots" aria-hidden="true">...</span></p>
+      <small class="vc-boot__brand">VetCasa</small>
+    </div>
+  </div>
+  <noscript><style>
+    #vc-boot{display:none!important}
+    .type-ghost{visibility:visible!important}
+    [data-sc-type]{display:none!important}
+  </style></noscript>
   <a class="skip-link" href="#home">Pular para o conteúdo</a>
 
   <!-- ============ HEADER FIXO ============ -->

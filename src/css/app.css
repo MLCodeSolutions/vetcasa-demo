@@ -18,44 +18,6 @@ section[id] {
   }
 }
 
-/* ---------- Preloader (fallback CSS de 3,2 s) ---------- */
-
-.app-preloader {
-  position: fixed;
-  inset: 0;
-  z-index: 9999;
-  display: grid;
-  place-items: center;
-  height: 100vh;
-  height: 100svh;
-  background: var(--cream);
-  animation: preloaderAutoHide 0s linear 3.2s forwards;
-  transition: opacity 0.35s ease, visibility 0s linear 0.35s;
-}
-
-.app-preloader.is-done {
-  opacity: 0;
-  visibility: hidden;
-}
-
-.app-preloader__bar {
-  display: block;
-  width: clamp(120px, 30vw, 180px);
-  height: 4px;
-  border-radius: 99px;
-  background: linear-gradient(90deg, var(--wine) 0 40%, var(--peach) 40% 100%);
-  background-size: 200% 100%;
-  animation: preloaderBar 1.1s linear infinite;
-}
-
-@keyframes preloaderBar {
-  to { background-position: -200% 0; }
-}
-
-@keyframes preloaderAutoHide {
-  to { opacity: 0; visibility: hidden; }
-}
-
 /* ---------- WhatsApp flutuante ---------- */
 
 .wa-float {
@@ -216,8 +178,7 @@ img.is-zoomable {
 
 /* ---------- Modo leve (celular / economia de dados) ---------- */
 
-.is-lite [data-sc-marquee],
-.is-lite .app-preloader__bar {
+.is-lite [data-sc-marquee] {
   animation: none !important;
 }
 
@@ -245,16 +206,4 @@ img.is-zoomable {
   -webkit-backdrop-filter: none;
   backdrop-filter: none;
   background: var(--cream);
-}
-
-/* ---------- Movimento reduzido ---------- */
-
-@media (prefers-reduced-motion: reduce) {
-  .app-preloader__bar {
-    animation: none !important;
-  }
-
-  .app-preloader {
-    transition: none !important;
-  }
 }

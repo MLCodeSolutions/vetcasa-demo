@@ -12,21 +12,21 @@
   <meta property="og:site_name" content="VetCasa">
   <meta property="og:title" content="VetCasa — Veterinária em casa">
   <meta property="og:description" content="Consultas, vacinas e exames no conforto do seu lar — para cães, gatos e pets exóticos.">
-  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/social/og-vetcasa.jpg">
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/social/og-vetcasa.jpg">
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="VetCasa — Veterinária em casa">
   <meta name="twitter:description" content="Atendimento veterinário domiciliar com hora marcada e cuidado individual.">
-  <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/social/og-vetcasa.jpg">
+  <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/social/og-vetcasa.jpg">
   <meta name="theme-color" content="#6e121b">
 
-  <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/favicon.svg">
-  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/favicon.svg">
+  <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/favicon.svg">
 
-  <link rel="preload" as="font" type="font/woff2" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/fonts/bricolage-grotesque-latin.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/fonts/hanken-grotesk-latin.woff2" crossorigin>
-  <link rel="preload" as="font" type="font/woff2" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/fonts/instrument-serif-italic-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/fonts/bricolage-grotesque-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/fonts/hanken-grotesk-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/fonts/instrument-serif-italic-latin.woff2" crossorigin>
 
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/dist/app.css" integrity="sha384-wuADVTFtXQ+fTorbBH356la3ktSPXU/5JcMxUEkNKETWOI9zy5v6+3DYHx39Auu5" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/app.css" integrity="sha384-MQDG7X1+c0rNEuikqa26MehXvZyWIKPRh2b3Fw3/BpKO5ghaMOtfgpRtA1xEX1tO" crossorigin="anonymous">
   
   
   
@@ -35,11 +35,169 @@
   
   
   
+
+  <style data-vc-boot>
+    #vc-boot {
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      display: grid;
+      place-items: center;
+      overflow: hidden;
+      overscroll-behavior: contain;
+      background:
+        radial-gradient(620px 420px at 50% 38%, rgba(110, 18, 27, 0.10), transparent 70%),
+        radial-gradient(380px 280px at 50% 62%, rgba(242, 215, 201, 0.55), transparent 70%),
+        var(--cream, #f8f3ee);
+      color: var(--ink, #2b1a1b);
+      font-family: system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+      text-align: center;
+      transition: opacity 0.35s ease, visibility 0s 0.35s;
+      animation: vc-boot-fallback 0.3s ease 3s forwards;
+    }
+
+    #vc-boot::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      background-image:
+        linear-gradient(rgba(110, 18, 27, 0.05) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(110, 18, 27, 0.05) 1px, transparent 1px);
+      background-size: 64px 64px;
+      -webkit-mask-image: radial-gradient(70% 60% at 50% 50%, #000 30%, transparent 80%);
+      mask-image: radial-gradient(70% 60% at 50% 50%, #000 30%, transparent 80%);
+      pointer-events: none;
+    }
+
+    #vc-boot .vc-boot__inner {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 18px;
+      transform: translateY(-2px);
+    }
+
+    #vc-boot .vc-boot__mark {
+      position: relative;
+      display: grid;
+      place-items: center;
+      width: 112px;
+      height: 112px;
+      border-radius: 50%;
+      background: linear-gradient(150deg, rgba(255, 252, 248, 0.96), rgba(242, 215, 201, 0.9));
+      border: 1px solid rgba(110, 18, 27, 0.18);
+      box-shadow: 0 0 50px rgba(110, 18, 27, 0.16), inset 0 0 30px rgba(255, 255, 255, 0.35);
+    }
+
+    #vc-boot .vc-boot__logo {
+      display: block;
+      width: 80px;
+      height: auto;
+      filter: drop-shadow(0 2px 5px rgba(43, 26, 27, 0.18));
+    }
+
+    #vc-boot .vc-boot__ring {
+      position: absolute;
+      inset: -12px;
+      border-radius: 50%;
+      border: 2px solid rgba(110, 18, 27, 0.14);
+      border-top-color: #c08a3e;
+      border-right-color: var(--wine, #6e121b);
+      animation: vc-boot-spin 1.1s linear infinite;
+    }
+
+    #vc-boot .vc-boot__ring::after {
+      content: "";
+      position: absolute;
+      top: -4px;
+      left: 50%;
+      width: 8px;
+      height: 8px;
+      margin-left: -4px;
+      border-radius: 50%;
+      background: #c08a3e;
+      box-shadow: 0 0 12px #c08a3e;
+    }
+
+    #vc-boot .vc-boot__text {
+      margin: 0;
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.02em;
+      color: var(--ink, #2b1a1b);
+    }
+
+    #vc-boot .vc-boot__dots {
+      display: inline-block;
+      width: 1.4em;
+      text-align: left;
+      animation: vc-boot-dots 1.4s steps(4, end) infinite;
+    }
+
+    #vc-boot .vc-boot__brand {
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.28em;
+      text-transform: uppercase;
+      color: var(--wine-soft, #813538);
+    }
+
+    @keyframes vc-boot-spin {
+      to { transform: rotate(360deg); }
+    }
+
+    @keyframes vc-boot-dots {
+      0% { clip-path: inset(0 100% 0 0); }
+      25% { clip-path: inset(0 75% 0 0); }
+      50% { clip-path: inset(0 50% 0 0); }
+      75% { clip-path: inset(0 25% 0 0); }
+      100% { clip-path: inset(0 0 0 0); }
+    }
+
+    @keyframes vc-boot-fallback {
+      to { opacity: 0; visibility: hidden; pointer-events: none; }
+    }
+
+    html.is-ready #vc-boot {
+      opacity: 0 !important;
+      visibility: hidden !important;
+      pointer-events: none !important;
+      animation: none !important;
+    }
+
+    html.is-ready #vc-boot * { animation: none !important; }
+
+    html.is-lite #vc-boot .vc-boot__ring,
+    html.is-lite #vc-boot .vc-boot__dots {
+      animation: none !important;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      #vc-boot { transition: none; }
+      #vc-boot .vc-boot__ring,
+      #vc-boot .vc-boot__dots { animation: none !important; }
+      #vc-boot .vc-boot__dots { clip-path: none; }
+    }
+  </style>
 </head>
 
 <body>
-  <div class="app-preloader" data-preloader aria-hidden="true"><span class="app-preloader__bar"></span></div>
-  <noscript><style>[data-preloader]{display:none}</style></noscript>
+  <div id="vc-boot" role="status" aria-live="polite" aria-label="Carregando o site">
+    <div class="vc-boot__inner">
+      <div class="vc-boot__mark" aria-hidden="true">
+        <img class="vc-boot__logo" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/favicon.svg" alt="" width="64" height="64">
+        <i class="vc-boot__ring"></i>
+      </div>
+      <p class="vc-boot__text">Carregando<span class="vc-boot__dots" aria-hidden="true">...</span></p>
+      <small class="vc-boot__brand">VetCasa</small>
+    </div>
+  </div>
+  <noscript><style>
+    #vc-boot{display:none!important}
+    .type-ghost{visibility:visible!important}
+    [data-sc-type]{display:none!important}
+  </style></noscript>
   <a class="skip-link" href="#home">Pular para o conteúdo</a>
 
   
@@ -127,7 +285,7 @@
 
         
         <div class="hero-photo" data-reveal="scale">
-          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/hero-vet.svg" width="1024" height="1280" alt="Ilustração de veterinária atendendo um cachorro dentro de casa">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/hero-vet.svg" width="1024" height="1280" alt="Ilustração de veterinária atendendo um cachorro dentro de casa">
           <div class="photo-badge">
             <div class="photo-badge__card">
               <span class="photo-badge__name">Dra. Helena Prado</span>
@@ -194,11 +352,11 @@
         </div>
 
         <div class="video-frame" data-reveal="scale">
-          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/video-placeholder.svg" width="720" height="1280" alt="Espaço reservado para depoimento em vídeo" loading="lazy">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/video-placeholder.svg" width="720" height="1280" alt="Espaço reservado para depoimento em vídeo" loading="lazy">
         </div>
 
         <div class="video-frame" data-reveal="scale">
-          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/video-placeholder.svg" width="720" height="1280" alt="Espaço reservado para depoimento em vídeo" loading="lazy">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/video-placeholder.svg" width="720" height="1280" alt="Espaço reservado para depoimento em vídeo" loading="lazy">
         </div>
       </div>
     </section>
@@ -215,26 +373,26 @@
 
       <div class="marquee-mask marquee-mask--section" data-reveal="fade" data-reveal-delay="120">
         <div class="marquee" data-sc-marquee>
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-01-casa.svg" width="800" height="1000" alt="Ilustração de casa" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-02-consulta.svg" width="800" height="1000" alt="Ilustração de consulta veterinária" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-03-vacina.svg" width="800" height="1000" alt="Ilustração de vacinação" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="Ilustração de coelho" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="Ilustração de ave" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="Ilustração de cachorro" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="Ilustração de gato" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-08-jabuti.svg" width="800" height="1000" alt="Ilustração de jabuti" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-09-roedor.svg" width="800" height="1000" alt="Ilustração de pequeno roedor" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-10-exame.svg" width="800" height="1000" alt="Ilustração de exame laboratorial" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-01-casa.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-02-consulta.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-03-vacina.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-08-jabuti.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-09-roedor.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-10-exame.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-01-casa.svg" width="800" height="1000" alt="Ilustração de casa" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-02-consulta.svg" width="800" height="1000" alt="Ilustração de consulta veterinária" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-03-vacina.svg" width="800" height="1000" alt="Ilustração de vacinação" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="Ilustração de coelho" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="Ilustração de ave" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="Ilustração de cachorro" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="Ilustração de gato" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-08-jabuti.svg" width="800" height="1000" alt="Ilustração de jabuti" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-09-roedor.svg" width="800" height="1000" alt="Ilustração de pequeno roedor" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-10-exame.svg" width="800" height="1000" alt="Ilustração de exame laboratorial" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-01-casa.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-02-consulta.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-03-vacina.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-08-jabuti.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-09-roedor.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-10-exame.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
         </div>
       </div>
     </section>
@@ -251,7 +409,7 @@
 
       <div class="benefits-grid" data-bento>
         <div class="benefits-photo" data-reveal="scale">
-          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/beneficios-casa.svg" alt="Ilustração de casa com estetoscópio e gato" loading="lazy" width="1024" height="1280">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/beneficios-casa.svg" alt="Ilustração de casa com estetoscópio e gato" loading="lazy" width="1024" height="1280">
         </div>
 
         <div class="features" data-grid4 data-reveal-group="80">
@@ -554,7 +712,7 @@
     <section class="section" id="sobre">
       <div class="about-grid">
         <div class="about-photo" data-reveal="scale">
-          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sobre-vet.svg" alt="Ilustração de veterinária segurando um coelho" loading="lazy" width="1024" height="1280">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sobre-vet.svg" alt="Ilustração de veterinária segurando um coelho" loading="lazy" width="1024" height="1280">
         </div>
 
         <div class="about-copy" data-reveal>
@@ -587,32 +745,32 @@
       </div>
 
       <div class="ebook-grid">
-        <a class="ebook-card" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/docs/coprofagia.pdf" target="_blank" rel="noopener noreferrer">
-          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/capa-coprofagia.svg" alt="Capa do guia sobre coprofagia" loading="lazy" width="655" height="1024">
+        <a class="ebook-card" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/docs/coprofagia.pdf" target="_blank" rel="noopener noreferrer">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/capa-coprofagia.svg" alt="Capa do guia sobre coprofagia" loading="lazy" width="655" height="1024">
           <div class="ebook-card__body">
             <div><strong class="ebook-card__title">Coprofagia</strong><div class="ebook-card__sub">Entenda, previna e trate.</div></div>
             <i class="ebook-card__icon icon-download" aria-hidden="true"></i>
           </div>
         </a>
 
-        <a class="ebook-card" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/docs/primeiro-pet.pdf" target="_blank" rel="noopener noreferrer">
-          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/capa-primeiro-pet.svg" alt="Capa do guia Seu Primeiro Pet" loading="lazy" width="655" height="1024">
+        <a class="ebook-card" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/docs/primeiro-pet.pdf" target="_blank" rel="noopener noreferrer">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/capa-primeiro-pet.svg" alt="Capa do guia Seu Primeiro Pet" loading="lazy" width="655" height="1024">
           <div class="ebook-card__body">
             <div><strong class="ebook-card__title">Seu Primeiro Pet</strong><div class="ebook-card__sub">Cães e gatos: por onde começar.</div></div>
             <i class="ebook-card__icon icon-download" aria-hidden="true"></i>
           </div>
         </a>
 
-        <a class="ebook-card" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/docs/primeiro-pet-exotico.pdf" target="_blank" rel="noopener noreferrer">
-          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/capa-primeiro-pet-exotico.svg" alt="Capa do guia Seu Primeiro Pet Exótico" loading="lazy" width="655" height="1024">
+        <a class="ebook-card" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/docs/primeiro-pet-exotico.pdf" target="_blank" rel="noopener noreferrer">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/capa-primeiro-pet-exotico.svg" alt="Capa do guia Seu Primeiro Pet Exótico" loading="lazy" width="655" height="1024">
           <div class="ebook-card__body">
             <div><strong class="ebook-card__title">Seu Primeiro Pet Exótico</strong><div class="ebook-card__sub">Para um companheiro diferente.</div></div>
             <i class="ebook-card__icon icon-download" aria-hidden="true"></i>
           </div>
         </a>
 
-        <a class="ebook-card" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/docs/psitacideos.pdf" target="_blank" rel="noopener noreferrer">
-          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/capa-psitacideos.svg" alt="Capa do guia sobre psitacídeos" loading="lazy" width="655" height="1024">
+        <a class="ebook-card" href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/docs/psitacideos.pdf" target="_blank" rel="noopener noreferrer">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/capa-psitacideos.svg" alt="Capa do guia sobre psitacídeos" loading="lazy" width="655" height="1024">
           <div class="ebook-card__body">
             <div><strong class="ebook-card__title">Psitacídeos</strong><div class="ebook-card__sub">Alimentação e ambiente ideais.</div></div>
             <i class="ebook-card__icon icon-download" aria-hidden="true"></i>
@@ -691,28 +849,28 @@
           <div class="cta-fade" data-cta-fade aria-hidden="true"></div>
           <div class="cta-mask" data-cta-mask>
             <div class="marquee marquee--pets" data-sc-marquee>
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="Ilustração de cachorro" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="Ilustração de gato" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="Ilustração de coelho" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="Ilustração de ave" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-09-roedor.svg" width="800" height="1000" alt="Ilustração de porquinho-da-índia" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-08-jabuti.svg" width="800" height="1000" alt="Ilustração de jabuti" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="Ilustração de arara" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="Ilustração de coelho" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="Ilustração de cachorro" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="Ilustração de gato" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-11-jardim.svg" width="800" height="1000" alt="Ilustração de folhas" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-09-roedor.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-08-jabuti.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
-              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/img/art/sil-11-jardim.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="Ilustração de cachorro" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="Ilustração de gato" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="Ilustração de coelho" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="Ilustração de ave" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-09-roedor.svg" width="800" height="1000" alt="Ilustração de porquinho-da-índia" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-08-jabuti.svg" width="800" height="1000" alt="Ilustração de jabuti" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="Ilustração de arara" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="Ilustração de coelho" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="Ilustração de cachorro" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="Ilustração de gato" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-11-jardim.svg" width="800" height="1000" alt="Ilustração de folhas" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-09-roedor.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-08-jabuti.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/art/sil-11-jardim.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
             </div>
           </div>
         </div>
@@ -793,7 +951,7 @@
     <figure class="app-modal__figure"><img data-lightbox-img alt=""><figcaption data-lightbox-cap></figcaption></figure>
   </dialog>
 
-  <script src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/dist/app.js" integrity="sha384-MsmrncXiD9b3AYqV1kHR8ocNmfXDVjVebPGKtBx4PiQuvxdLcsTHA6j05nvDXXz9" crossorigin="anonymous" defer></script>
+  <script src="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/app.js" integrity="sha384-aujlKUZsxuKrqZ0g5eOcRjN1iVwxsOLI//bczC2rE6exF+UeqpAm/ZElq02PaEmW" crossorigin="anonymous" defer></script>
   
   
   
