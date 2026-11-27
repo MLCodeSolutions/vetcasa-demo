@@ -3,8 +3,8 @@
   "repo": "vetcasa-demo",
   "tag": "v1.0.0",
   "base": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/",
-  "generatedAt": "2026-11-27T00:18:16.097Z",
-  "totalBytes": 968787,
+  "generatedAt": "2026-11-27T00:34:03.404Z",
+  "totalBytes": 969055,
   "files": [
     {
       "path": "assets/docs/coprofagia.pdf",
@@ -268,7 +268,7 @@
       "path": "dist/embed.html",
       "url": "https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/dist/embed.html",
       "mime": "text/html; charset=utf-8",
-      "bytes": 1597
+      "bytes": 1865
     },
     {
       "path": "dist/index-external.html",

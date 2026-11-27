@@ -10,7 +10,7 @@
 <p id="app-fallback">Carregando o site…</p>
 <script>
 (function () {
-  var url = "https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/dist/index.html";
+  var url = "https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/index.html";
   var fallback = document.getElementById('app-fallback');
   var timer = setTimeout(showFallback, 8000);
 
@@ -32,6 +32,7 @@
     })
     .then(function (html) {
       clearTimeout(timer);
+      html = html.split("https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/").join("https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/");
       document.open();
       document.write(html);
       document.close();
@@ -39,6 +40,6 @@
     .catch(showFallback);
 }());
 </script>
-<noscript><p><a href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/dist/index.html" target="_blank" rel="noopener noreferrer">Abrir o site</a></p></noscript>
+<noscript><p><a href="https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/index.html" target="_blank" rel="noopener noreferrer">Abrir o site</a></p></noscript>
 </body>
 </html>

@@ -4,6 +4,8 @@ Site institucional demonstrativo da **VetCasa** (veterinária domiciliar fictíc
 
 > **Dados fictícios.** Marca, textos, contatos, CRMV e PDFs são de demonstração. Não use o WhatsApp/e-mail publicados como contato real. Troque em `src/js/site-config.js` antes de um uso de produção.
 
+> **Estado do CDN (importante).** A tag `v1.0.0` foi publicada no GitHub, mas o jsDelivr ainda **não a indexou** (`@v1.0.0` → 404), enquanto `@main` e o commit `a930cdce5788f86855364bf047227c2a577d0e21` respondem 200. Para o site não ficar quebrado, `dist/index-sha.html` e `dist/embed.html` usam esse **commit imutável**; o loader troca `@v1.0.0/` por `@a930cdc.../` ao carregar. Quando a tag indexar (pode levar horas), rode o build **sem** `--fallback-sha`, crie uma nova tag e recole o bloco.
+
 ## Estrutura
 
 ```
@@ -38,10 +40,14 @@ Regras de nome: minúsculas, sem espaço/acento, `[a-z0-9-]`.
 Todo asset usa a tag fixa (nunca `@main`, nunca `raw.githubusercontent.com`, nunca caminho relativo no `dist`):
 
 ```
-https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/<caminho>
+# canônica (aguardando indexação do jsDelivr)
+https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/<caminho>
+
+# em uso agora (commit imutável, testado 200)
+https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/<caminho>
 ```
 
-> **OWNER provisório:** `Mateus-TDM` (nome do `git config` local). Confirme com `gh api user --jq .login` após o login; se for outro, rode `node _tools/build.mjs --owner=<login>` antes de commitar/taguear. O `dist` atual foi gerado com esse OWNER.
+> **OWNER:** `MLCodeSolutions` (confirmado via `gh api user`). O commit de fallback é `a930cdce5788f86855364bf047227c2a577d0e21`.
 
 A tabela completa, com tipo e bytes, é gerada em [`dist/manifest.md`](dist/manifest.md). Resumo:
 
@@ -54,8 +60,8 @@ A tabela completa, com tipo e bytes, é gerada em [`dist/manifest.md`](dist/mani
 | PDFs | 4 | `assets/docs/*.pdf` | application/pdf | 1,4–1,5 KB |
 | Fontes | 9 | `assets/fonts/*.woff2` | font/woff2 | 11–214 KB |
 | Vídeos | 0 | — | — | — |
-| Página | 1 | `dist/index.html` | text/html | 216,5 KB |
-| Loader | 1 | `dist/embed.html` | text/html | 1,5 KB |
+| Página | 1 | `dist/index.html` (tag) / `dist/index-sha.html` (fallback) | text/html | 216,8 KB |
+| Loader | 1 | `dist/embed.html` | text/html | 1,8 KB |
 | CSS/JS externos | 2 | `dist/app.css`, `dist/app.js` | text/css, text/javascript | 134,8 / 28,2 KB |
 
 > As ilustrações são SVG (vetoriais). Por isso não há versões 600/1200 px: a regra de raster não se aplica. Se fotos raster forem adicionadas, gere WebP 600 e 1200 px.
@@ -67,7 +73,10 @@ A tabela completa, com tipo e bytes, é gerada em [`dist/manifest.md`](dist/mani
 node _tools/build.mjs --local
 
 # Build de produção (tag imutável)
-node _tools/build.mjs --owner=<OWNER> --repo=vetcasa-demo --tag=v1.0.0
+node _tools/build.mjs --owner=MLCodeSolutions --repo=vetcasa-demo --tag=v1.0.0
+
+# Enquanto a tag não indexar no jsDelivr, inclua o fallback por commit
+node _tools/build.mjs --owner=MLCodeSolutions --repo=vetcasa-demo --tag=v1.0.0 --fallback-sha=a930cdce5788f86855364bf047227c2a577d0e21
 ```
 
 O build:
@@ -83,11 +92,13 @@ O teste local pode ser servido com `python -m http.server 8765` na raiz e `http:
 
 ### Tamanho e limite do Google Sites
 
-- `dist/index.html` completo: **216,5 KB**.
+- `dist/index.html` (tag) e `dist/index-sha.html` (commit): **216,8 KB**.
 - Somente o HTML (variante external): **53,6 KB**.
-- `dist/embed.html`: **1,5 KB**.
+- `dist/embed.html`: **1,8 KB**.
 
-Há relatos de limite de ~10.000 caracteres no campo “Incorporar código”, mas **não trate isso como certo**: cole e teste. Se o campo recusar/truncar o arquivo completo, use `dist/embed.html`. Ele busca `dist/index.html` no jsDelivr e substitui o documento com `document.write` (sem iframe aninhado), mantendo header fixo, âncoras e rolagem única. A variante external não resolve sozinha o limite porque o HTML ainda tem ~54 KB.
+Há relatos de limite de ~10.000 caracteres no campo “Incorporar código”, mas **não trate isso como certo**: cole e teste. Se o campo recusar/truncar o arquivo completo, use `dist/embed.html`. Ele busca no jsDelivr a página do commit de fallback e substitui o documento com `document.write` (sem iframe aninhado), mantendo header fixo, âncoras e rolagem única. A variante external não resolve sozinha o limite porque o HTML ainda tem ~54 KB.
+
+> **Até a tag indexar:** cole `dist/embed.html` (recomendado) ou `dist/index-sha.html`. O `dist/index.html` com `@v1.0.0` só funciona quando o jsDelivr resolver a tag.
 
 ## Publicação no GitHub
 
@@ -98,15 +109,17 @@ git init -b main
 git add .
 git commit -m "VetCasa: site estatico, build CDN e embed para Google Sites"
 
-node _tools/build.mjs --owner=Mateus-TDM --repo=vetcasa-demo --tag=v1.0.0
+node _tools/build.mjs --owner=MLCodeSolutions --repo=vetcasa-demo --tag=v1.0.0 --fallback-sha=a930cdce5788f86855364bf047227c2a577d0e21
 
 git add dist
-git commit -m "build: dist v1.0.0"
+git commit -m "build: dist com fallback por commit"
 
-gh repo create Mateus-TDM/vetcasa-demo --public --source . --remote origin --push
-git tag -a v1.0.0 -m "v1.0.0"
-git push origin v1.0.0
+gh repo create MLCodeSolutions/vetcasa-demo --public --source . --remote origin --push
+git tag -a v1.0.2 -m "v1.0.2"
+git push origin v1.0.2
 ```
+
+> O repositório e a tag `v1.0.0` já foram publicados. A tag `v1.0.2` marca o build com fallback por commit enquanto o jsDelivr não indexa a `v1.0.0`.
 
 - O `dist/` é **commitado** (o jsDelivr serve os arquivos da tag).
 - Qualquer alteração exige **nova tag** (`v1.0.1`, ...). Nunca mover, apagar ou reutilizar uma tag.
@@ -123,8 +136,9 @@ Get-Content dist/manifest.json | ConvertFrom-Json | ForEach-Object { $_.files } 
 2. Na engrenagem da página, use **“Ocultar título da página”** (se existir).
 3. Em **Tema**, escolha o cabeçalho mínimo/sem banner e remova logo. Em **Configurações → Navegação** (ou **Tema → Navegação**), oculte a navegação nativa. Os rótulos mudam por versão; confira no editor.
 4. **Inserir → Incorporar → aba “Incorporar código”**.
-   - **1ª tentativa:** abra `dist/index.html`, copie tudo, cole e clique em **Avançar → Inserir**.
-   - **Se recusar/truncar:** cole `dist/embed.html` (loader de 1,5 KB). Ele carrega a página completa do jsDelivr.
+   - **Use agora:** cole `dist/embed.html` (loader de 1,8 KB). Ele carrega a página do commit imutável no jsDelivr e reescreve a base da tag para o commit.
+   - **Alternativa:** cole `dist/index-sha.html` (216,8 KB) se o campo aceitar.
+   - **Depois que a tag indexar:** `dist/index.html` com `@v1.0.0` passa a funcionar; aí recole o bloco.
 5. Selecione o bloco e arraste as alças até as quatro bordas; use **Largura total** na seção, se aparecer; estique a altura ao máximo. Não há garantia de “embed em página inteira” para código — é manual.
 6. Apague todos os outros blocos/seções: a página deve conter **somente** o embed, para não criar rolagem dupla.
 7. **Publicar → “Qualquer pessoa”** e abra a URL publicada (não valide só no editor).
@@ -154,7 +168,9 @@ Get-Content dist/manifest.json | ConvertFrom-Json | ForEach-Object { $_.files } 
 
 ## PENDENTE
 
-- [ ] Concluir `gh auth login` e confirmar `OWNER` (o build resolve por `gh api user --jq .login`).- [ ] Criar o repositório público e enviar a tag `v1.0.0`.
+- [x] Login realizado e `OWNER` confirmado (`MLCodeSolutions`).
+- [x] Repositório público criado e `main` + tag `v1.0.0` enviados.
+- [ ] Aguardar o jsDelivr indexar `@v1.0.0`; depois rodar o build sem `--fallback-sha`, criar nova tag (ex.: `v1.0.3`) e recolar o bloco.
 - [ ] Substituir contatos fictícios (`5511912345678`, `contato@vetcasa.com.br`, `@vetcasa.demo`) por dados reais, se for produção.
 - [ ] Vídeos: não há arquivos. Manter placeholders ou informar IDs do YouTube (aí liberar `frame-src https://www.youtube-nocookie.com`).
 - [ ] Fotos reais: nenhuma; pipeline WebP 600/1200 só se entrarem.
@@ -164,9 +180,9 @@ Get-Content dist/manifest.json | ConvertFrom-Json | ForEach-Object { $_.files } 
 
 ## Riscos e limites
 
-- **Limite do campo:** 216,5 KB inline pode ser recusado; o fallback é `embed.html`. Teste a colagem.
+- **Limite do campo:** 216,8 KB inline pode ser recusado; o fallback é `embed.html` (1,8 KB). Teste a colagem.
 - **Sandbox do Sites:** `fetch`/`document.write` precisam ser validados nos três navegadores; se bloquearem, use a variante que o campo aceitar.
-- **jsDelivr:** atraso de indexação da tag; arquivos >20 MB não são suportados (nenhum aqui chega perto; vídeos são 0).
+- **jsDelivr (tag):** a tag `v1.0.0` está no GitHub mas ainda não indexou no CDN (404). O build com `--fallback-sha` usa o commit imutável `a930cdc...`; quando a tag indexar, refaça o build sem fallback e recole. Arquivos >20 MB não são suportados (nenhum aqui chega perto; vídeos são 0).
 - **Rolagem dupla** em telas curtas por altura fixa do bloco.
 - **OneDrive + git:** locks eventuais; prefira uma cópia local fora do OneDrive se possível.
 - **Fonte de ícones:** `lucide.woff2` tem 214 KB; o modo leve não remove a fonte, só animações/sombras.
@@ -181,7 +197,7 @@ Get-Content dist/manifest.json | ConvertFrom-Json | ForEach-Object { $_.files } 
 
 - [x] Sem token/senha/.env no repo, no chat ou no código.
 - [x] Sem `@main` e sem `raw.githubusercontent.com` no `dist` (verificado pelo build).
-- [ ] URLs do jsDelivr testadas após o push/tag (200 OK).
+- [x] URLs do jsDelivr testadas: `@a930cdc...` (página, assets e loader) 200 OK; `@v1.0.0` ainda 404 (indexação pendente).
 - [x] Sem rolagem horizontal em 390, 768 e 1440 px (medido: `scrollWidth == clientWidth`).
 - [x] Header sticky, menu mobile, WhatsApp, voltar ao topo, âncoras, lightbox e preloader testados localmente.
 - [x] Preloader libera em ≤3 s; fallback CSS funciona sem JS (testado com JS desativado).
@@ -189,4 +205,4 @@ Get-Content dist/manifest.json | ConvertFrom-Json | ForEach-Object { $_.files } 
 - [x] Links externos com `rel="noopener noreferrer"`; `safeUrl()` ativo.
 - [x] PDFs abrem em nova aba (200 OK no servidor local).
 - [ ] Teste em celular real (iOS Safari + Android Chrome) na URL publicada.
-- [ ] Tag `v1.0.0` publicada e imutável.
+- [x] Tag `v1.0.0` publicada e imutável (release criada), com fallback `v1.0.2` por commit enquanto o CDN não indexa.

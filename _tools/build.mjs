@@ -24,6 +24,7 @@ const argValue = (name) => {
 const owner = (argValue('owner') || process.env.OWNER || '').trim();
 const repo = (argValue('repo') || process.env.REPO || 'vetcasa-demo').trim();
 const tag = (argValue('tag') || process.env.TAG || 'v1.0.0').trim();
+const fallbackSha = (argValue('fallback-sha') || process.env.FALLBACK_SHA || '').trim();
 
 if (!local && !owner) {
   console.error('ERRO: defina OWNER. Ex.: OWNER=seu-login node _tools/build.mjs');
@@ -186,6 +187,14 @@ async function main() {
 
   await write('dist/index.html', inline);
 
+  const shaBase = fallbackSha
+    ? `https://cdn.jsdelivr.net/gh/${owner}/${repo}@${fallbackSha}/`
+    : '';
+
+  if (shaBase) {
+    await write('dist/index-sha.html', inline.split(base).join(shaBase));
+  }
+
   /* ---------- 4. Variante external + SRI ---------- */
 
   await write('dist/app.css', appCss);
@@ -212,7 +221,12 @@ async function main() {
 
   /* ---------- 5. Loader para o campo "Incorporar código" ---------- */
 
-  const pageUrl = `${base}dist/index.html`;
+  const pageUrl = shaBase
+    ? `${shaBase}dist/index.html`
+    : `${base}dist/index.html`;
+  const rewriteBase = shaBase
+    ? `      html = html.split(${JSON.stringify(base)}).join(${JSON.stringify(shaBase)});\n`
+    : '';
   const embed = `<!doctype html>
 <html lang="pt-BR">
 <head>
@@ -247,7 +261,7 @@ async function main() {
     })
     .then(function (html) {
       clearTimeout(timer);
-      document.open();
+${rewriteBase}      document.open();
       document.write(html);
       document.close();
     })

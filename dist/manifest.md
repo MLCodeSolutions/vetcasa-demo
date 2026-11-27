@@ -48,6 +48,6 @@ Tag: `v1.0.0`
 | `assets/video/.gitkeep` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/assets/video/.gitkeep | application/octet-stream | 0 B (0.0 KB) |
 | `dist/app.css` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/dist/app.css | text/css; charset=utf-8 | 138081 B (134.8 KB) |
 | `dist/app.js` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/dist/app.js | text/javascript; charset=utf-8 | 28838 B (28.2 KB) |
-| `dist/embed.html` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/dist/embed.html | text/html; charset=utf-8 | 1597 B (1.6 KB) |
+| `dist/embed.html` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/dist/embed.html | text/html; charset=utf-8 | 1865 B (1.8 KB) |
 | `dist/index-external.html` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/dist/index-external.html | text/html; charset=utf-8 | 55170 B (53.9 KB) |
 | `dist/index.html` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.0/dist/index.html | text/html; charset=utf-8 | 222018 B (216.8 KB) |
