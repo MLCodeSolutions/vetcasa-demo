@@ -23,6 +23,9 @@
   var boot = document.getElementById('vc-boot');
   var bootDone = false;
   var bootFade = reduceMotion ? 0 : 320;
+  /* No embed, o loader marca window.__vcBootAt no document.write para a
+     intro contar 1 s a partir da página, não do tempo de fetch. */
+  var bootStartedAt = typeof window.__vcBootAt === 'number' ? window.__vcBootAt : 0;
 
   function finishBoot() {
     if (bootDone) return;
@@ -44,7 +47,7 @@
   function scheduleBoot() {
     if (bootDone) return;
     var min = reduceMotion ? 500 : 1000;
-    var wait = Math.max(0, min - performance.now());
+    var wait = Math.max(0, min - (performance.now() - bootStartedAt));
     setTimeout(finishBoot, wait);
   }
 

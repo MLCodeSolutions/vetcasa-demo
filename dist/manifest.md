@@ -47,7 +47,7 @@ Tag: `a930cdce5788f86855364bf047227c2a577d0e21`
 | `assets/img/social/og-vetcasa.jpg` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/img/social/og-vetcasa.jpg | image/jpeg | 32895 B (32.1 KB) |
 | `assets/video/.gitkeep` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/assets/video/.gitkeep | application/octet-stream | 0 B (0.0 KB) |
 | `dist/app.css` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/app.css | text/css; charset=utf-8 | 137420 B (134.2 KB) |
-| `dist/app.js` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/app.js | text/javascript; charset=utf-8 | 29856 B (29.2 KB) |
+| `dist/app.js` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/app.js | text/javascript; charset=utf-8 | 30102 B (29.4 KB) |
 | `dist/embed.html` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/embed.html | text/html; charset=utf-8 | 1665 B (1.6 KB) |
 | `dist/index-external.html` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/index-external.html | text/html; charset=utf-8 | 62023 B (60.6 KB) |
-| `dist/index.html` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/index.html | text/html; charset=utf-8 | 229160 B (223.8 KB) |
+| `dist/index.html` | https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/dist/index.html | text/html; charset=utf-8 | 229406 B (224.0 KB) |
