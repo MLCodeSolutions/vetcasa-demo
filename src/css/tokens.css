@@ -1,0 +1,92 @@
+/* ==========================================================================
+   tokens.css — design tokens do modelo VetCasa
+   Paleta, tipografia e espaçamentos reutilizáveis em qualquer projeto.
+   ========================================================================== */
+
+:root {
+  /* Cor — vinho / marca */
+  --wine: #6e121b;
+  --wine-deep: #4c0108;
+  --wine-bright: #870611;
+  --wine-muted: #662124;
+  --wine-soft: #813538;
+
+  /* Cor — cremes e areias */
+  --cream: #f8f3ee;
+  --cream-2: #f0e4dc;
+  --peach: #f2d7c9;
+  --peach-light: #f9e8df;
+  --sand: #ecd9cf;
+  --sand-deep: #e0c3b5;
+
+  /* Cor — texto */
+  --ink: #2b1a1b;
+  --ink-2: #3f2d2e;
+  --ink-3: #4f3b3c;
+  --ink-4: #5e4849;
+
+  /* Cor — acentos */
+  --gold: #c08a3e;        /* estrelas dos depoimentos */
+  --moss: #4a5a2c;        /* verde parceiro */
+  --moss-light: #e4ecc4;  /* fundo do parceiro verde */
+  --moss-mid: #5b6d37;    /* hover do parceiro verde (botão) */
+  --moss-chip: #d6e2ac;   /* hover do parceiro verde (cupom) */
+
+  --white: #ffffff;
+
+  /* Tipografia */
+  --font-title: "Bricolage Grotesque", "Hanken Grotesk", system-ui, sans-serif;
+  --font-body: "Hanken Grotesk", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-serif: "Instrument Serif", Georgia, serif;
+  --font-icon: "lucide";
+
+  --fs-body: 17px;
+  --lh-body: 1.6;
+
+  /* Raios */
+  --r-9: 9px;
+  --r-12: 12px;
+  --r-13: 13px;
+  --r-14: 14px;
+  --r-16: 16px;
+  --r-18: 18px;
+  --r-20: 20px;
+  --r-24: 24px;
+  --r-28: 28px;
+  --r-32: 32px;
+  --r-36: 36px;
+  --r-40: 40px;
+  --r-pill: 99px;
+
+  /* Layout */
+  --container: 1320px;
+  --gutter: clamp(16px, 3vw, 32px);
+  --gap: 14px;
+  --section-space: clamp(80px, 10vw, 140px);
+  --header-offset: 96px;
+
+  /* Movimento */
+  --ease: 0.25s ease;
+  --ease-out: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --dur-reveal: 700ms;
+  --dur-hover: 240ms;
+  --fade-time: 1.4s;
+
+  /* Sombras */
+  --shadow-hero: 0 12px 32px -8px rgba(242, 215, 201, 0.5);
+  --shadow-video: 0 30px 60px -30px rgba(76, 1, 8, 0.5);
+  --shadow-club-video: 0 40px 80px -30px rgba(0, 0, 0, 0.6);
+  --shadow-card-hover: 0 24px 48px -24px rgba(110, 18, 27, 0.35);
+  --shadow-qr: 0 12px 30px -12px rgba(76, 1, 8, 0.4);
+  --shadow-mobile-bar: 0 16px 40px -10px rgba(76, 1, 8, 0.6);
+
+  /* Breakpoints documentados (CSS não suporta variáveis em media query):
+       1180px — esconde nav desktop, mostra burger
+       1100px — grid de 4 colunas → 2
+       1024px — padding do rodapé (Elementor)
+        900px — bento → 1 coluna, header mobile, centralização, barra fixa
+        767px — padding do rodapé (Elementor)
+        600px — grid de 2 → 1
+        520px — esconde o texto "Agendar"
+  */
+}

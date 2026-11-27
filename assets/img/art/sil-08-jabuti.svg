@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Silhueta de jabuti">
+  <rect width="800" height="1000" fill="#e2c08b"/>
+  <circle cx="150" cy="220" r="190" fill="#f7e9cf" opacity=".8"/>
+  <circle cx="690" cy="840" r="200" fill="#f7e9cf" opacity=".5"/>
+  <rect x="30" y="30" width="740" height="940" rx="56" fill="none" stroke="#4c0108" stroke-width="4" opacity=".22"/>
+  <g fill="#4c0108">
+    <path d="M190 780c0-150 96-252 242-252s242 102 242 252Z"/>
+    <circle cx="654" cy="712" r="56"/>
+    <path d="M226 780c-40 0-62 26-62 62 0 34 26 56 62 56h56V780Z"/>
+    <path d="M556 780h58v118h-58z"/>
+    <path d="M392 898l44 44-44 44-44-44Z"/>
+  </g>
+  <g fill="none" stroke="#e2c08b" stroke-width="12" stroke-linecap="round">
+    <path d="M432 560v220M310 640c60-40 190-40 244 0M280 740h310"/>
+  </g>
+  <circle cx="674" cy="698" r="8" fill="#e2c08b"/>
+  <g fill="#4c0108" opacity=".5">
+    <circle cx="650" cy="230" r="9"/>
+    <circle cx="614" cy="266" r="6"/>
+  </g>
+</svg>

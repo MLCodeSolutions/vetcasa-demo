@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Silhueta de casa com pata">
+  <rect width="800" height="1000" fill="#f2d7c9"/>
+  <circle cx="672" cy="196" r="190" fill="#f9e8df" opacity=".8"/>
+  <circle cx="110" cy="850" r="210" fill="#f9e8df" opacity=".45"/>
+  <rect x="30" y="30" width="740" height="940" rx="56" fill="none" stroke="#6e121b" stroke-width="4" opacity=".25"/>
+  <path d="M214 664V448l186-150 186 150v216H482V540H332v124Z" fill="#6e121b"/>
+  <path d="M214 448l186-150 186 150" fill="none" stroke="#6e121b" stroke-width="26" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#f9e8df">
+    <ellipse cx="400" cy="404" rx="38" ry="32"/>
+    <circle cx="354" cy="362" r="16"/>
+    <circle cx="386" cy="344" r="16"/>
+    <circle cx="416" cy="344" r="16"/>
+    <circle cx="448" cy="362" r="16"/>
+  </g>
+  <g fill="#6e121b" opacity=".55">
+    <circle cx="122" cy="196" r="8"/>
+    <circle cx="158" cy="230" r="6"/>
+    <circle cx="684" cy="806" r="9"/>
+    <circle cx="650" cy="842" r="6"/>
+  </g>
+</svg>

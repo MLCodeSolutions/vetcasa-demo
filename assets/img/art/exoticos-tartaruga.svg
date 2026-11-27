@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1280" width="1024" height="1280" role="img" aria-label="Silhueta de tartaruga">
+  <rect width="1024" height="1280" fill="#ecd9cf"/>
+  <circle cx="200" cy="230" r="230" fill="#f2d7c9"/>
+  <circle cx="840" cy="1100" r="260" fill="#f2d7c9" opacity=".7"/>
+  <path d="M120 1080h784" stroke="#e0c3b5" stroke-width="10" stroke-linecap="round"/>
+  <g fill="#4c0108">
+    <path d="M172 960c0-206 132-346 332-346s332 140 332 346Z"/>
+    <circle cx="812" cy="866" r="78"/>
+    <path d="M226 960c-54 0-84 36-84 86 0 46 36 78 84 78h74V960Z"/>
+    <path d="M676 960h80v164h-80z"/>
+    <path d="M486 1124l62 62-62 62-62-62Z"/>
+  </g>
+  <g fill="none" stroke="#ecd9cf" stroke-width="16" stroke-linecap="round">
+    <path d="M504 660v300M338 772c84-54 260-54 332 0M300 906h424"/>
+  </g>
+  <circle cx="842" cy="846" r="11" fill="#ecd9cf"/>
+  <g fill="#4c0108" opacity=".45">
+    <circle cx="180" cy="880" r="10"/>
+    <circle cx="226" cy="922" r="7"/>
+  </g>
+</svg>

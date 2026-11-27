@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 600" width="600" height="600" role="img" aria-label="Cupom ilustrado de desconto">
+  <rect width="600" height="600" fill="#6e121b"/>
+  <rect x="34" y="34" width="532" height="532" rx="44" fill="none" stroke="#f2d7c9" stroke-width="4" stroke-dasharray="14 14" opacity=".55"/>
+  <path d="M132 178h336a26 26 0 0 1 26 26v192a26 26 0 0 1-26 26H132a26 26 0 0 1-26-26V204a26 26 0 0 1 26-26Z" fill="#f2d7c9"/>
+  <circle cx="106" cy="300" r="34" fill="#6e121b"/>
+  <circle cx="494" cy="300" r="34" fill="#6e121b"/>
+  <path d="M406 178v244" stroke="#6e121b" stroke-width="4" stroke-dasharray="10 12" opacity=".45"/>
+  <g fill="#6e121b">
+    <ellipse cx="266" cy="326" rx="52" ry="40"/>
+    <circle cx="212" cy="270" r="19"/>
+    <circle cx="254" cy="250" r="19"/>
+    <circle cx="298" cy="250" r="19"/>
+    <circle cx="340" cy="270" r="19"/>
+    <path d="M450 330c-30-26-62-6-62 20 0 26 36 46 62 66 26-20 62-40 62-66 0-26-32-46-62-20Z"/>
+  </g>
+  <g fill="#f2d7c9" opacity=".5">
+    <circle cx="120" cy="120" r="9"/>
+    <circle cx="492" cy="492" r="10"/>
+  </g>
+</svg>

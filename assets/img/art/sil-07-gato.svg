@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Silhueta de gato">
+  <rect width="800" height="1000" fill="#fffaf6"/>
+  <circle cx="660" cy="210" r="200" fill="#f2d7c9" opacity=".6"/>
+  <circle cx="120" cy="860" r="220" fill="#f2d7c9" opacity=".45"/>
+  <rect x="30" y="30" width="740" height="940" rx="56" fill="none" stroke="#6e121b" stroke-width="4" opacity=".2"/>
+  <g fill="#6e121b">
+    <path d="M232 820c0-136 70-224 168-224s168 88 168 224c0 66-30 106-76 106H308c-46 0-76-40-76-106Z"/>
+    <circle cx="400" cy="436" r="112"/>
+    <path d="M310 372l-20-116 112 62Z"/>
+    <path d="M490 372l20-116-112 62Z"/>
+    <path d="M560 820c46 0 64-42 78-96 10-38 36-58 58-46 24 12 22 48 8 78-26 56-70 92-144 92Z"/>
+  </g>
+  <g fill="#fffaf6">
+    <circle cx="356" cy="446" r="11"/>
+    <circle cx="444" cy="446" r="11"/>
+    <path d="M400 480l18 20h-36Z"/>
+    <path d="M400 514q-14 22-34 6M400 514q14 22 34 6" fill="none" stroke="#fffaf6" stroke-width="8" stroke-linecap="round"/>
+  </g>
+  <g fill="#6e121b" opacity=".45">
+    <circle cx="680" cy="828" r="9"/>
+    <circle cx="644" cy="864" r="6"/>
+    <circle cx="150" cy="220" r="7"/>
+  </g>
+</svg>

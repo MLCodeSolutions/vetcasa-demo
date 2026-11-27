@@ -1,0 +1,26 @@
+/* ==========================================================================
+   illustrations.css — ajustes para as artes SVG do Modelo 2
+   As ilustrações usam os mesmos slots das fotos originais.
+   ========================================================================== */
+
+/* Vídeos: a arte ocupa o quadro no lugar do iframe */
+.video-frame > img,
+.club-video > img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+/* A arte do hero continua visível no mobile (o layout zera min-height) */
+@media (max-width: 900px) {
+  .hero-photo {
+    min-height: 420px !important;
+  }
+}
+
+/* Capas de guia: leve fundo enquanto o SVG carrega */
+.ebook-card img {
+  background: var(--cream-2);
+}

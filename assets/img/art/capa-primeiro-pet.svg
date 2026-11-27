@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 655 1024" width="655" height="1024" role="img" aria-label="Capa ilustrada: filhote e casa">
+  <rect width="655" height="1024" fill="#f9e8df"/>
+  <rect x="30" y="30" width="595" height="964" rx="34" fill="none" stroke="#6e121b" stroke-width="4" stroke-dasharray="12 12" opacity=".35"/>
+  <circle cx="120" cy="200" r="160" fill="#f2d7c9" opacity=".8"/>
+  <path d="M474 330V214l80-64 80 64v116Z" fill="none" stroke="#6e121b" stroke-width="9" stroke-linejoin="round" opacity=".55"/>
+  <path d="M508 330V250h92v80" fill="none" stroke="#6e121b" stroke-width="9" opacity=".45"/>
+  <g fill="#6e121b">
+    <path d="M172 800c-46 0-72-30-72-78V600c0-92 62-154 150-154 58 0 106 26 130 72h52c68 0 116 50 116 124v80c0 48-28 78-72 78Z"/>
+    <circle cx="262" cy="500" r="98"/>
+    <ellipse cx="172" cy="482" rx="40" ry="80" transform="rotate(-24 172 482)"/>
+    <ellipse cx="352" cy="482" rx="40" ry="80" transform="rotate(24 352 482)"/>
+    <ellipse cx="262" cy="574" rx="52" ry="36"/>
+    <path d="M120 700c-34 22-52 54-54 96" fill="none" stroke="#6e121b" stroke-width="40" stroke-linecap="round"/>
+  </g>
+  <g fill="#f9e8df">
+    <circle cx="228" cy="524" r="9"/>
+    <circle cx="296" cy="524" r="9"/>
+    <ellipse cx="264" cy="566" rx="20" ry="13"/>
+    <path d="M248 604q16 12 32 0" fill="none" stroke="#f9e8df" stroke-width="7" stroke-linecap="round"/>
+  </g>
+  <g fill="#6e121b" opacity=".4">
+    <circle cx="540" cy="850" r="10"/>
+    <circle cx="500" cy="890" r="7"/>
+  </g>
+</svg>

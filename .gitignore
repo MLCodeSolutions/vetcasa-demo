@@ -1,0 +1,21 @@
+# Segredos
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+
+# Dependências e sistema
+node_modules/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Material local / não publicado
+_reference/
+dist/preview.html
+*.local.html
+
+# Logs
+*.log

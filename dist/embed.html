@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>VetCasa</title>
+<style>html,body{margin:0;height:100%;background:#f8f3ee}#app-fallback{font:16px/1.5 system-ui,-apple-system,"Segoe UI",sans-serif;color:#6e121b;padding:24px;text-align:center}#app-fallback a{color:#6e121b}</style>
+</head>
+<body>
+<p id="app-fallback">Carregando o site…</p>
+<script>
+(function () {
+  var url = "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/dist/index.html";
+  var fallback = document.getElementById('app-fallback');
+  var timer = setTimeout(showFallback, 8000);
+
+  function showFallback() {
+    if (!fallback || !document.body.contains(fallback)) return;
+    fallback.textContent = 'Não foi possível carregar o site. ';
+    var link = document.createElement('a');
+    link.href = url;
+    link.target = '_blank';
+    link.rel = 'noopener noreferrer';
+    link.textContent = 'Abrir em nova aba';
+    fallback.appendChild(link);
+  }
+
+  fetch(url, { cache: 'force-cache' })
+    .then(function (response) {
+      if (!response.ok) throw new Error('HTTP ' + response.status);
+      return response.text();
+    })
+    .then(function (html) {
+      clearTimeout(timer);
+      document.open();
+      document.write(html);
+      document.close();
+    })
+    .catch(showFallback);
+}());
+</script>
+<noscript><p><a href="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/dist/index.html" target="_blank" rel="noopener noreferrer">Abrir o site</a></p></noscript>
+</body>
+</html>

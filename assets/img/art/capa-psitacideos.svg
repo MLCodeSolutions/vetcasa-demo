@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 655 1024" width="655" height="1024" role="img" aria-label="Capa ilustrada: arara em um galho">
+  <rect width="655" height="1024" fill="#f8f3ee"/>
+  <rect x="30" y="30" width="595" height="964" rx="34" fill="none" stroke="#6e121b" stroke-width="4" stroke-dasharray="12 12" opacity=".3"/>
+  <circle cx="130" cy="190" r="150" fill="#f2d7c9" opacity=".8"/>
+  <path d="M90 760c110-26 220-16 320 28 60 26 110 18 150-16" fill="none" stroke="#6e121b" stroke-width="20" stroke-linecap="round" opacity=".75"/>
+  <g fill="#6e121b">
+    <path d="M206 560c0-96 80-166 178-166 56 0 104 22 138 60-42 12-64 36-70 72-16 96-88 164-182 164-44 0-64-54-64-130Z"/>
+    <circle cx="474" cy="448" r="64"/>
+    <path d="M534 436l56 24-58 28Z"/>
+    <path d="M202 580c-36 42-36 108 12 148-60 8-100-22-110-72Z"/>
+  </g>
+  <path d="M396 456c66 10 96 62 82 132-40-12-72-44-82-132Z" fill="#f8f3ee" opacity=".35"/>
+  <circle cx="486" cy="430" r="8" fill="#f8f3ee"/>
+  <g fill="#6e121b" opacity=".35">
+    <circle cx="530" cy="850" r="10"/>
+    <circle cx="490" cy="890" r="7"/>
+    <circle cx="150" cy="420" r="8"/>
+  </g>
+</svg>

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1280" width="1024" height="1280" role="img" aria-label="Silhueta de ave em um galho">
+  <rect width="1024" height="1280" fill="#e4ecc4"/>
+  <circle cx="810" cy="240" r="240" fill="#f8f3ee" opacity=".75"/>
+  <circle cx="180" cy="1100" r="280" fill="#f8f3ee" opacity=".45"/>
+  <path d="M120 1010c160-40 320-26 470 34 110 44 210 32 290-30" fill="none" stroke="#4a5a2c" stroke-width="34" stroke-linecap="round"/>
+  <g fill="#4a5a2c">
+    <path d="M322 700c0-150 124-258 276-258 86 0 162 34 212 94-66 16-100 56-110 112-24 150-136 254-282 254-70 0-96-84-96-202Z"/>
+    <circle cx="740" cy="528" r="100"/>
+    <path d="M832 506l86 38-88 44Z"/>
+    <path d="M318 732c-58 66-58 170 18 230-92 14-156-32-172-112Z"/>
+  </g>
+  <path d="M622 548c100 14 150 98 126 204-58-18-110-66-126-204Z" fill="#e4ecc4" opacity=".35"/>
+  <circle cx="758" cy="502" r="13" fill="#f8f3ee"/>
+  <g fill="#4a5a2c" opacity=".4">
+    <circle cx="210" cy="330" r="11"/>
+    <circle cx="258" cy="374" r="7"/>
+    <circle cx="860" cy="1000" r="10"/>
+  </g>
+</svg>

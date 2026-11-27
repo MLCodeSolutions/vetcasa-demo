@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Silhueta de ave em um galho">
+  <rect width="800" height="1000" fill="#4c0108"/>
+  <circle cx="650" cy="200" r="200" fill="#870611" opacity=".7"/>
+  <circle cx="130" cy="880" r="230" fill="#6e121b" opacity=".8"/>
+  <rect x="30" y="30" width="740" height="940" rx="56" fill="none" stroke="#f2d7c9" stroke-width="4" opacity=".3"/>
+  <path d="M120 800c120-26 240-18 360 26 80 30 150 22 200-16" fill="none" stroke="#f2d7c9" stroke-width="24" stroke-linecap="round"/>
+  <g fill="#f2d7c9">
+    <path d="M296 540c0-104 86-180 192-180 60 0 112 24 148 66-46 12-70 40-76 78-16 104-94 176-196 176-48 0-68-58-68-140Z"/>
+    <circle cx="588" cy="420" r="70"/>
+    <path d="M652 408l60 26-62 30Z"/>
+    <path d="M292 560c-40 46-40 118 12 160-64 10-108-22-120-78Z"/>
+  </g>
+  <path d="M506 430c70 10 104 68 88 142-40-12-76-46-88-142Z" fill="#6e121b" opacity=".35"/>
+  <circle cx="600" cy="402" r="9" fill="#4c0108"/>
+  <g fill="#f2d7c9" opacity=".5">
+    <circle cx="160" cy="240" r="9"/>
+    <circle cx="198" cy="274" r="6"/>
+    <circle cx="660" cy="846" r="8"/>
+  </g>
+</svg>

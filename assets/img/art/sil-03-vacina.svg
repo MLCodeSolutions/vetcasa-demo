@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Silhueta de seringa e escudo">
+  <rect width="800" height="1000" fill="#f9e8df"/>
+  <circle cx="160" cy="210" r="200" fill="#f2d7c9"/>
+  <circle cx="690" cy="860" r="190" fill="#f2d7c9" opacity=".7"/>
+  <rect x="30" y="30" width="740" height="940" rx="56" fill="none" stroke="#6e121b" stroke-width="4" opacity=".22"/>
+  <g transform="rotate(-28 400 520)" fill="#6e121b">
+    <rect x="270" y="448" width="330" height="120" rx="30"/>
+    <rect x="600" y="486" width="120" height="44" rx="18"/>
+    <rect x="712" y="500" width="52" height="16" rx="8"/>
+    <rect x="238" y="432" width="52" height="152" rx="22"/>
+    <rect x="164" y="490" width="86" height="36" rx="16"/>
+  </g>
+  <g fill="#f8f3ee" opacity=".9">
+    <rect x="344" y="472" width="14" height="72" rx="7" transform="rotate(-28 344 472)"/>
+    <rect x="392" y="472" width="14" height="72" rx="7" transform="rotate(-28 392 472)"/>
+    <rect x="440" y="472" width="14" height="72" rx="7" transform="rotate(-28 440 472)"/>
+  </g>
+  <path d="M632 742l96-52 96 52v92c0 74-60 122-96 138-36-16-96-64-96-138Z" fill="#6e121b" opacity=".18"/>
+  <path d="M680 806l32 34 56-64" fill="none" stroke="#6e121b" stroke-width="22" stroke-linecap="round" stroke-linejoin="round"/>
+  <g fill="#6e121b" opacity=".45">
+    <circle cx="662" cy="230" r="9"/>
+    <circle cx="626" cy="264" r="6"/>
+  </g>
+</svg>

@@ -1,0 +1,31 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 655 1024" width="655" height="1024" role="img" aria-label="Capa ilustrada: cão e lupa">
+  <rect width="655" height="1024" fill="#6e121b"/>
+  <rect x="30" y="30" width="595" height="964" rx="34" fill="none" stroke="#f2d7c9" stroke-width="4" stroke-dasharray="12 12" opacity=".55"/>
+  <circle cx="555" cy="170" r="150" fill="#870611" opacity=".7"/>
+  <g fill="#f2d7c9" opacity=".9">
+    <ellipse cx="200" cy="120" rx="20" ry="16"/>
+    <circle cx="178" cy="98" r="8"/>
+    <circle cx="196" cy="88" r="8"/>
+    <circle cx="214" cy="88" r="8"/>
+    <circle cx="232" cy="98" r="8"/>
+  </g>
+  <g fill="#f2d7c9">
+    <path d="M190 760c-40 0-62-28-62-68V600c0-84 56-140 136-140 52 0 96 24 118 66h46c62 0 106 44 106 112v70c0 40-24 68-62 68Z"/>
+    <circle cx="272" cy="470" r="88"/>
+    <ellipse cx="192" cy="452" rx="36" ry="72" transform="rotate(-22 192 452)"/>
+    <ellipse cx="352" cy="452" rx="36" ry="72" transform="rotate(22 352 452)"/>
+    <ellipse cx="272" cy="538" rx="46" ry="32"/>
+  </g>
+  <g fill="#6e121b">
+    <circle cx="246" cy="494" r="8"/>
+    <circle cx="306" cy="494" r="8"/>
+    <ellipse cx="276" cy="530" rx="18" ry="11"/>
+  </g>
+  <circle cx="430" cy="650" r="96" fill="none" stroke="#6e121b" stroke-width="26"/>
+  <circle cx="430" cy="650" r="96" fill="none" stroke="#f2d7c9" stroke-width="8" opacity=".55"/>
+  <path d="M500 720l88 88" stroke="#f2d7c9" stroke-width="30" stroke-linecap="round"/>
+  <g fill="#f2d7c9" opacity=".45">
+    <circle cx="120" cy="880" r="10"/>
+    <circle cx="160" cy="914" r="7"/>
+  </g>
+</svg>

@@ -1,0 +1,286 @@
+{
+  "owner": "Mateus-TDM",
+  "repo": "vetcasa-demo",
+  "tag": "v1.0.0",
+  "base": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/",
+  "generatedAt": "2026-11-27T00:13:05.787Z",
+  "totalBytes": 968057,
+  "files": [
+    {
+      "path": "assets/docs/coprofagia.pdf",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/docs/coprofagia.pdf",
+      "mime": "application/pdf",
+      "bytes": 1474
+    },
+    {
+      "path": "assets/docs/primeiro-pet-exotico.pdf",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/docs/primeiro-pet-exotico.pdf",
+      "mime": "application/pdf",
+      "bytes": 1540
+    },
+    {
+      "path": "assets/docs/primeiro-pet.pdf",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/docs/primeiro-pet.pdf",
+      "mime": "application/pdf",
+      "bytes": 1569
+    },
+    {
+      "path": "assets/docs/psitacideos.pdf",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/docs/psitacideos.pdf",
+      "mime": "application/pdf",
+      "bytes": 1545
+    },
+    {
+      "path": "assets/fonts/bricolage-grotesque-latin-ext.woff2",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/fonts/bricolage-grotesque-latin-ext.woff2",
+      "mime": "font/woff2",
+      "bytes": 30736
+    },
+    {
+      "path": "assets/fonts/bricolage-grotesque-latin.woff2",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/fonts/bricolage-grotesque-latin.woff2",
+      "mime": "font/woff2",
+      "bytes": 76888
+    },
+    {
+      "path": "assets/fonts/hanken-grotesk-latin-ext.woff2",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/fonts/hanken-grotesk-latin-ext.woff2",
+      "mime": "font/woff2",
+      "bytes": 19588
+    },
+    {
+      "path": "assets/fonts/hanken-grotesk-latin.woff2",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/fonts/hanken-grotesk-latin.woff2",
+      "mime": "font/woff2",
+      "bytes": 34704
+    },
+    {
+      "path": "assets/fonts/instrument-serif-italic-latin-ext.woff2",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/fonts/instrument-serif-italic-latin-ext.woff2",
+      "mime": "font/woff2",
+      "bytes": 12384
+    },
+    {
+      "path": "assets/fonts/instrument-serif-italic-latin.woff2",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/fonts/instrument-serif-italic-latin.woff2",
+      "mime": "font/woff2",
+      "bytes": 22128
+    },
+    {
+      "path": "assets/fonts/instrument-serif-regular-latin-ext.woff2",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/fonts/instrument-serif-regular-latin-ext.woff2",
+      "mime": "font/woff2",
+      "bytes": 11604
+    },
+    {
+      "path": "assets/fonts/instrument-serif-regular-latin.woff2",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/fonts/instrument-serif-regular-latin.woff2",
+      "mime": "font/woff2",
+      "bytes": 21032
+    },
+    {
+      "path": "assets/fonts/lucide.woff2",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/fonts/lucide.woff2",
+      "mime": "font/woff2",
+      "bytes": 219184
+    },
+    {
+      "path": "assets/img/art/beneficios-casa.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/beneficios-casa.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1894
+    },
+    {
+      "path": "assets/img/art/capa-coprofagia.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/capa-coprofagia.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1592
+    },
+    {
+      "path": "assets/img/art/capa-primeiro-pet-exotico.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/capa-primeiro-pet-exotico.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1430
+    },
+    {
+      "path": "assets/img/art/capa-primeiro-pet.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/capa-primeiro-pet.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1529
+    },
+    {
+      "path": "assets/img/art/capa-psitacideos.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/capa-psitacideos.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1152
+    },
+    {
+      "path": "assets/img/art/cupom.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/cupom.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1117
+    },
+    {
+      "path": "assets/img/art/exoticos-ave.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/exoticos-ave.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1083
+    },
+    {
+      "path": "assets/img/art/exoticos-coelho.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/exoticos-coelho.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1324
+    },
+    {
+      "path": "assets/img/art/exoticos-tartaruga.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/exoticos-tartaruga.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1006
+    },
+    {
+      "path": "assets/img/art/hero-vet.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/hero-vet.svg",
+      "mime": "image/svg+xml",
+      "bytes": 3056
+    },
+    {
+      "path": "assets/img/art/sil-01-casa.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-01-casa.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1087
+    },
+    {
+      "path": "assets/img/art/sil-02-consulta.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-02-consulta.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1111
+    },
+    {
+      "path": "assets/img/art/sil-03-vacina.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-03-vacina.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1459
+    },
+    {
+      "path": "assets/img/art/sil-04-coelho.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1327
+    },
+    {
+      "path": "assets/img/art/sil-05-ave.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1176
+    },
+    {
+      "path": "assets/img/art/sil-06-cao.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1382
+    },
+    {
+      "path": "assets/img/art/sil-07-gato.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1211
+    },
+    {
+      "path": "assets/img/art/sil-08-jabuti.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-08-jabuti.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1038
+    },
+    {
+      "path": "assets/img/art/sil-09-roedor.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-09-roedor.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1365
+    },
+    {
+      "path": "assets/img/art/sil-10-exame.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-10-exame.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1252
+    },
+    {
+      "path": "assets/img/art/sil-11-jardim.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-11-jardim.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1233
+    },
+    {
+      "path": "assets/img/art/sobre-vet.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sobre-vet.svg",
+      "mime": "image/svg+xml",
+      "bytes": 2799
+    },
+    {
+      "path": "assets/img/art/video-placeholder.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/video-placeholder.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1225
+    },
+    {
+      "path": "assets/img/brand/logo-vetcasa-horizontal-branca.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/brand/logo-vetcasa-horizontal-branca.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1123
+    },
+    {
+      "path": "assets/img/brand/logo-vetcasa-vertical.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/brand/logo-vetcasa-vertical.svg",
+      "mime": "image/svg+xml",
+      "bytes": 1167
+    },
+    {
+      "path": "assets/img/favicon.svg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/favicon.svg",
+      "mime": "image/svg+xml",
+      "bytes": 674
+    },
+    {
+      "path": "assets/img/social/og-vetcasa.jpg",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/social/og-vetcasa.jpg",
+      "mime": "image/jpeg",
+      "bytes": 32895
+    },
+    {
+      "path": "assets/video/.gitkeep",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/video/.gitkeep",
+      "mime": "application/octet-stream",
+      "bytes": 0
+    },
+    {
+      "path": "dist/app.css",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/dist/app.css",
+      "mime": "text/css; charset=utf-8",
+      "bytes": 138036
+    },
+    {
+      "path": "dist/app.js",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/dist/app.js",
+      "mime": "text/javascript; charset=utf-8",
+      "bytes": 28838
+    },
+    {
+      "path": "dist/embed.html",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/dist/embed.html",
+      "mime": "text/html; charset=utf-8",
+      "bytes": 1587
+    },
+    {
+      "path": "dist/index-external.html",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/dist/index-external.html",
+      "mime": "text/html; charset=utf-8",
+      "bytes": 54850
+    },
+    {
+      "path": "dist/index.html",
+      "url": "https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/dist/index.html",
+      "mime": "text/html; charset=utf-8",
+      "bytes": 221663
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1280" width="1024" height="1280" role="img" aria-label="Silhueta de coelho em uma casa">
+  <rect width="1024" height="1280" fill="#f2d7c9"/>
+  <circle cx="820" cy="220" r="240" fill="#f9e8df" opacity=".8"/>
+  <circle cx="160" cy="1120" r="280" fill="#f9e8df" opacity=".5"/>
+  <path d="M148 1120V600a364 364 0 0 1 728 0v520Z" fill="#e0c3b5" opacity=".55"/>
+  <g fill="#6e121b">
+    <ellipse cx="420" cy="520" rx="52" ry="180" transform="rotate(-10 420 520)"/>
+    <ellipse cx="560" cy="490" rx="52" ry="196" transform="rotate(8 560 490)"/>
+    <circle cx="490" cy="710" r="152"/>
+    <path d="M620 930c110 0 190 84 190 200v74c0 64-52 116-116 116H390c-64 0-116-52-116-116v-54c0-128 100-220 236-220Z"/>
+    <circle cx="418" cy="1000" r="38"/>
+    <circle cx="700" cy="1006" r="42"/>
+  </g>
+  <circle cx="760" cy="742" r="48" fill="#f2d7c9"/>
+  <g fill="#f9e8df">
+    <circle cx="438" cy="686" r="13"/>
+    <circle cx="542" cy="686" r="13"/>
+    <ellipse cx="490" cy="754" rx="20" ry="14"/>
+    <path d="M488 818q22 18 44 0" fill="none" stroke="#f9e8df" stroke-width="9" stroke-linecap="round"/>
+  </g>
+  <g fill="#6e121b" opacity=".45">
+    <circle cx="850" cy="1020" r="12"/>
+    <circle cx="804" cy="1064" r="8"/>
+    <circle cx="190" cy="300" r="10"/>
+  </g>
+</svg>

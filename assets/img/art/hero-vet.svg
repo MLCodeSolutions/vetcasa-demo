@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1280" width="1024" height="1280" role="img" aria-label="Ilustração de veterinária atendendo um cachorro dentro de casa">
+  <rect width="1024" height="1280" fill="#f9e8df"/>
+  <circle cx="880" cy="170" r="220" fill="#f2d7c9" opacity=".8"/>
+  <circle cx="120" cy="1180" r="250" fill="#f2d7c9" opacity=".45"/>
+
+  <path d="M170 1090V540a342 342 0 0 1 684 0v550Z" fill="#f6e2d6"/>
+  <path d="M206 1090V540a306 306 0 0 1 612 0v550" fill="none" stroke="#e0c3b5" stroke-width="7"/>
+  <rect y="1082" width="1024" height="198" fill="#ecd9cf"/>
+  <rect y="1076" width="1024" height="8" fill="#e0c3b5"/>
+
+  <g stroke="#6e121b" stroke-width="9" stroke-linejoin="round" fill="#fffaf6">
+    <rect x="196" y="300" width="206" height="266" rx="26"/>
+    <path d="M300 304v258M200 436h198" fill="none"/>
+  </g>
+
+  <ellipse cx="512" cy="1010" rx="356" ry="64" fill="#e6caba"/>
+
+  <g fill="#4c0108">
+    <ellipse cx="392" cy="822" rx="124" ry="104"/>
+    <circle cx="458" cy="704" r="66"/>
+    <ellipse cx="410" cy="646" rx="34" ry="60" transform="rotate(-24 410 646)"/>
+    <ellipse cx="510" cy="648" rx="34" ry="60" transform="rotate(24 510 648)"/>
+    <ellipse cx="502" cy="722" rx="30" ry="22"/>
+    <path d="M292 790c-46 10-72 44-64 86 6 32 34 48 62 34" fill="none" stroke="#4c0108" stroke-width="38" stroke-linecap="round"/>
+    <rect x="312" y="872" width="58" height="132" rx="28"/>
+    <rect x="430" y="872" width="58" height="132" rx="28"/>
+  </g>
+  <circle cx="472" cy="690" r="8" fill="#f9e8df"/>
+  <path d="M452 716q20 16 40 0" fill="none" stroke="#f9e8df" stroke-width="6" stroke-linecap="round"/>
+  <path d="M414 782h86" stroke="#f2d7c9" stroke-width="12" stroke-linecap="round"/>
+
+  <g fill="#6e121b">
+    <circle cx="646" cy="462" r="56"/>
+    <circle cx="646" cy="398" r="27"/>
+    <path d="M592 540c0-30 22-50 54-50s54 20 54 50l44 386H548Z"/>
+    <path d="M598 596c-32 46-62 86-96 116-18 12-40 6-50-12-10-18-2-38 16-48 34-20 62-54 88-92Z"/>
+  </g>
+  <path d="M600 578c-24 26-30 60-18 96" fill="none" stroke="#f2d7c9" stroke-width="9" stroke-linecap="round"/>
+  <circle cx="574" cy="690" r="13" fill="#f2d7c9"/>
+  <circle cx="574" cy="690" r="5" fill="#6e121b"/>
+
+  <g fill="none" stroke="#4a5a2c" stroke-width="20" stroke-linecap="round">
+    <path d="M872 980V760"/>
+    <path d="M872 806c-64 0-100-34-100-88 64 0 100 34 100 88Z" fill="#4a5a2c"/>
+    <path d="M872 866c64 0 100-34 100-88-64 0-100 34-100 88Z" fill="#4a5a2c"/>
+    <path d="M872 930c-48 0-76-26-76-70 48 0 76 26 76 70Z" fill="#4a5a2c"/>
+  </g>
+  <path d="M812 992h124l-16 92h-92Z" fill="#c08a3e"/>
+
+  <g fill="none" stroke="#6e121b" stroke-width="7" stroke-linecap="round" opacity=".25">
+    <path d="M760 250c44-24 92-12 108 28"/>
+    <path d="M786 196c48-8 90 18 98 60"/>
+  </g>
+  <g fill="#f8f3ee" opacity=".9">
+    <ellipse cx="150" cy="210" rx="22" ry="17"/>
+    <circle cx="126" cy="184" r="9"/>
+    <circle cx="146" cy="172" r="9"/>
+    <circle cx="166" cy="172" r="9"/>
+    <circle cx="186" cy="184" r="9"/>
+  </g>
+</svg>

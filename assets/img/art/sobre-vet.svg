@@ -1,0 +1,64 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1024 1280" width="1024" height="1280" role="img" aria-label="Ilustração de veterinária segurando um coelho">
+  <rect width="1024" height="1280" fill="#fffaf6"/>
+  <circle cx="860" cy="720" r="420" fill="#f2d7c9" opacity=".65"/>
+  <circle cx="170" cy="240" r="170" fill="#f9e8df"/>
+  <rect y="1080" width="1024" height="200" fill="#ecd9cf"/>
+  <rect y="1074" width="1024" height="8" fill="#e0c3b5"/>
+
+  <g>
+    <rect x="700" y="230" width="210" height="252" rx="26" fill="#f8f3ee" stroke="#6e121b" stroke-width="10"/>
+    <g fill="#6e121b" transform="translate(805 366) scale(.62) translate(-32 -32)">
+      <ellipse cx="32" cy="41.6" rx="6.1" ry="5.1"/>
+      <circle cx="24.6" cy="35.4" r="2.5"/>
+      <circle cx="29.5" cy="32.6" r="2.5"/>
+      <circle cx="34.5" cy="32.6" r="2.5"/>
+      <circle cx="39.4" cy="35.4" r="2.5"/>
+    </g>
+  </g>
+
+  <g fill="none" stroke="#4a5a2c" stroke-width="16" stroke-linecap="round">
+    <path d="M262 940V760"/>
+    <path d="M262 796c-58 0-92-32-92-82 58 0 92 32 92 82Z" fill="#4a5a2c"/>
+    <path d="M262 856c58 0 92-32 92-82-58 0-92 32-92 82Z" fill="#4a5a2c"/>
+  </g>
+  <path d="M206 952h112l-14 96h-84Z" fill="#c08a3e"/>
+
+  <ellipse cx="530" cy="1042" rx="250" ry="46" fill="#e0c3b5" opacity=".7"/>
+
+  <g fill="#6e121b">
+    <circle cx="530" cy="430" r="58"/>
+    <circle cx="530" cy="364" r="28"/>
+    <path d="M456 516c0-28 32-46 74-46s74 18 74 46l44 500H412Z"/>
+    <path d="M470 560c-34 54-44 108-30 152 8 26 34 38 58 26l26-14-30-46c-8-26-2-62 18-102Z"/>
+    <path d="M590 560c34 54 44 108 30 152-8 26-34 38-58 26l-26-14 30-46c8-26 2-62-18-102Z"/>
+  </g>
+
+  <g fill="#f8f3ee">
+    <ellipse cx="530" cy="706" rx="66" ry="80"/>
+    <circle cx="530" cy="606" r="46"/>
+    <ellipse cx="500" cy="548" rx="17" ry="56" transform="rotate(-12 500 548)"/>
+    <ellipse cx="560" cy="548" rx="17" ry="56" transform="rotate(12 560 548)"/>
+    <circle cx="488" cy="724" r="26"/>
+    <circle cx="572" cy="724" r="26"/>
+  </g>
+  <g fill="#f2d7c9">
+    <ellipse cx="502" cy="550" rx="7" ry="38" transform="rotate(-12 502 550)"/>
+    <ellipse cx="558" cy="550" rx="7" ry="38" transform="rotate(12 558 550)"/>
+  </g>
+  <g fill="#6e121b">
+    <circle cx="514" cy="600" r="5"/>
+    <circle cx="546" cy="600" r="5"/>
+    <ellipse cx="530" cy="620" rx="7" ry="5"/>
+    <path d="M522 636q8 8 16 0" fill="none" stroke="#6e121b" stroke-width="4" stroke-linecap="round"/>
+  </g>
+
+  <g fill="none" stroke="#6e121b" stroke-width="6" stroke-linecap="round" opacity=".22">
+    <path d="M770 800c34-14 66-8 88 16"/>
+    <circle cx="150" cy="1010" r="62"/>
+    <circle cx="196" cy="1010" r="40"/>
+  </g>
+  <g fill="#6e121b" opacity=".35">
+    <circle cx="680" cy="180" r="9"/>
+    <circle cx="646" cy="216" r="6"/>
+  </g>
+</svg>

@@ -1,0 +1,802 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+
+  <title>VetCasa &#8212; Veterinária em casa</title>
+  
+  <meta name="description" content="VetCasa: atendimento veterinário domiciliar para cães, gatos e pets exóticos. Consultas, vacinas e exames com hora marcada, no conforto do seu lar.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="pt_BR">
+  <meta property="og:site_name" content="VetCasa">
+  <meta property="og:title" content="VetCasa — Veterinária em casa">
+  <meta property="og:description" content="Consultas, vacinas e exames no conforto do seu lar — para cães, gatos e pets exóticos.">
+  <meta property="og:image" content="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/social/og-vetcasa.jpg">
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="VetCasa — Veterinária em casa">
+  <meta name="twitter:description" content="Atendimento veterinário domiciliar com hora marcada e cuidado individual.">
+  <meta name="twitter:image" content="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/social/og-vetcasa.jpg">
+  <meta name="theme-color" content="#6e121b">
+
+  <link rel="icon" type="image/svg+xml" href="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/favicon.svg">
+  <link rel="apple-touch-icon" href="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/favicon.svg">
+
+  <link rel="preload" as="font" type="font/woff2" href="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/fonts/bricolage-grotesque-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/fonts/hanken-grotesk-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/fonts/instrument-serif-italic-latin.woff2" crossorigin>
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/dist/app.css" integrity="sha384-GdMXrY4ISNWpm/l7IcGjrKBRfTATqbHl+nfYciWGH2SUJ8JrvqzaHOpROA4thX8E" crossorigin="anonymous">
+  
+  
+  
+  
+  
+  
+  
+  
+</head>
+
+<body>
+  <div class="app-preloader" data-preloader aria-hidden="true"><span class="app-preloader__bar"></span></div>
+  <noscript><style>[data-preloader]{display:none}</style></noscript>
+  <a class="skip-link" href="#home">Pular para o conteúdo</a>
+
+  
+  <header class="site-header">
+    <div class="header-inner container">
+      <a class="brand" href="#home" data-menu-close aria-label="VetCasa — início">
+        <svg class="brand__mark" viewBox="0 0 64 64" aria-hidden="true" focusable="false">
+          <circle cx="32" cy="32" r="32" fill="#6e121b"/>
+          <path d="M14 31.5 32 16l18 15.5" fill="none" stroke="#f8f3ee" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18.5 31.5V48h27V31.5" fill="none" stroke="#f2d7c9" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity=".75"/>
+          <g fill="#f8f3ee">
+            <ellipse cx="32" cy="41.6" rx="6.1" ry="5.1"/>
+            <circle cx="24.6" cy="35.4" r="2.5"/>
+            <circle cx="29.5" cy="32.6" r="2.5"/>
+            <circle cx="34.5" cy="32.6" r="2.5"/>
+            <circle cx="39.4" cy="35.4" r="2.5"/>
+          </g>
+        </svg>
+        <span class="brand__word">
+          <span class="brand__name">VetCasa</span>
+          <span class="brand__tag">Veterinária em casa</span>
+        </span>
+      </a>
+
+      
+      <nav class="nav-desktop" data-desktop aria-label="Navegação principal">
+        <a class="nav-link" href="#beneficios">Benefícios</a>
+        <a class="nav-link" href="#servicos">Serviços</a>
+        <a class="nav-link" href="#agendamento">Agendar</a>
+        <a class="nav-link" href="#sobre">Dra. Helena</a>
+        <a class="nav-link" href="#ebook">E-books</a>
+        <a class="nav-link" href="#faq">Dúvidas</a>
+        <a class="nav-link" href="#contato">Contato</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="btn btn--wine btn--header" href="#agendamento">
+          <i class="icon-calendar-days" aria-hidden="true"></i> <span data-agendar-txt>Agendar</span>
+        </a>
+        <button class="burger" data-burger type="button" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu-mobile">
+          <i class="icon-menu" data-sc-burger aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+
+    <nav class="nav-mobile" id="menu-mobile" data-sc-menu aria-label="Menu mobile">
+      <a href="#beneficios" data-menu-close>Benefícios</a>
+      <a href="#servicos" data-menu-close>Serviços</a>
+      <a href="#agendamento" data-menu-close>Agendar</a>
+      <a href="#sobre" data-menu-close>Dra. Helena</a>
+      <a href="#ebook" data-menu-close>E-books</a>
+      <a href="#faq" data-menu-close>Dúvidas</a>
+      <a href="#contato" data-menu-close>Contato</a>
+    </nav>
+  </header>
+
+  <main>
+
+    
+    <section class="section section--hero" id="home">
+      <div class="bento bento--hero" data-bento data-reveal-group="90">
+
+        <div class="hero-panel" data-hero data-reveal-group="80">
+          <div class="hero-glow" aria-hidden="true"></div>
+
+          <div class="hero-eyebrow" data-reveal>
+            <i class="icon-house" aria-hidden="true"></i> Veterinária domiciliar
+          </div>
+
+          <div class="hero-copy" data-reveal>
+            <h1 class="title title--hero">Seu pet cuidado em casa,
+              <span class="type-wrap"><span class="type-ghost">sem estresse</span><span data-sc-type="sem estresse"></span></span>
+              e sem sala de espera.</h1>
+            <p class="hero-lede">Consultas, vacinas e exames no conforto do seu lar — para cães, gatos, coelhos, aves, roedores e répteis.</p>
+          </div>
+
+          <div class="hero-actions" data-reveal>
+            <a class="btn btn--peach btn--hero" href="#agendamento">
+              <span class="btn__badge"><i class="icon-calendar-days" aria-hidden="true"></i></span>
+              Agendar visita
+            </a>
+            <span class="hero-loc" data-hero-loc><i class="icon-map-pin" aria-hidden="true"></i> Centro, Jardim das Flores e Vila Nova</span>
+          </div>
+        </div>
+
+        
+        <div class="hero-photo" data-reveal="scale">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/hero-vet.svg" width="1024" height="1280" alt="Ilustração de veterinária atendendo um cachorro dentro de casa">
+          <div class="photo-badge">
+            <div class="photo-badge__card">
+              <span class="photo-badge__name">Dra. Helena Prado</span>
+              <span class="photo-badge__role">Médica-veterinária · <span data-config="crmv">CRMV 00000-SP</span></span>
+            </div>
+            <span class="pill-status"><i class="icon-badge-check" aria-hidden="true"></i> Registro ativo</span>
+          </div>
+        </div>
+
+        <div class="stat-card stat-card--time" data-reveal>
+          <i class="stat-card__icon icon-clock" aria-hidden="true"></i>
+          <div>
+            <div class="stat-card__value"><span data-sc-count="60,90,">60–90</span><small> min</small></div>
+            <div class="stat-card__label">de consulta, sem pressa</div>
+          </div>
+        </div>
+
+        <div class="stat-card stat-card--pets" data-reveal>
+          <div class="stat-card__pets-icons" aria-hidden="true">
+            <i class="icon-dog"></i><i class="icon-cat"></i><i class="icon-rabbit"></i><i class="icon-bird"></i><i class="icon-turtle"></i>
+          </div>
+          <div class="stat-card__text"><strong>Pets convencionais e não convencionais</strong> — até jabutis e tigres-d'água.</div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section section--social" id="depoimentos">
+      <div class="bento bento--testimonials" data-bento data-reveal-group="70">
+
+        <div class="quote-feature" data-reveal>
+          <span class="quote-feature__eyebrow">Quem já abriu a porta</span>
+          <p class="quote-feature__text">"A primeira veterinária que encontro que cuida de coelhos."</p>
+          <span class="quote-feature__author">— Camila Duarte</span>
+        </div>
+
+        <figure class="testimonial" data-reveal>
+          <div class="testimonial__stars" aria-label="5 de 5 estrelas"><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i></div>
+          <blockquote class="testimonial__quote">Profissional, atenciosa e super pontual. Atendeu todas as necessidades do nosso porquinho-da-índia com muito zelo. Valores justos. Super recomendo!</blockquote>
+          <figcaption class="testimonial__author">Thiago Freitas <span class="testimonial__pet">· porquinho-da-índia</span></figcaption>
+        </figure>
+
+        <figure class="testimonial" data-reveal>
+          <div class="testimonial__stars" aria-label="5 de 5 estrelas"><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i></div>
+          <blockquote class="testimonial__quote">Cuidou delicadamente do nosso caso, com muita sensibilidade com a doença do nosso hamster anão russo. Confiável e solícita.</blockquote>
+          <figcaption class="testimonial__author">Larissa Nogueira <span class="testimonial__pet">· hamster</span></figcaption>
+        </figure>
+
+        <figure class="testimonial" data-reveal>
+          <div class="testimonial__stars" aria-label="5 de 5 estrelas"><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i><i class="icon-star" aria-hidden="true"></i></div>
+          <blockquote class="testimonial__quote">Já tarde da noite ela estava lutando para salvar a Margarida, nossa marreca de topete. Delicada e atenciosa o tempo todo. Gratidão!</blockquote>
+          <figcaption class="testimonial__author">Eduardo Pires <span class="testimonial__pet">· ave</span></figcaption>
+        </figure>
+      </div>
+
+      
+      <div class="bento bento--videos" data-bento data-reveal-group="80">
+        <div class="video-intro" data-reveal>
+          <span class="video-intro__eyebrow"><i class="icon-circle-play" aria-hidden="true"></i> Depoimentos em vídeo</span>
+          <p class="video-intro__text">Quem recebeu a Dra. Helena em casa <span class="accent accent--peach">conta como foi.</span></p>
+          <a class="btn btn--peach btn--video" href="https://wa.me/5511912345678" target="_blank" rel="noopener noreferrer" data-wa>
+            <i class="icon-message-circle" aria-hidden="true"></i> Agendar pelo WhatsApp
+          </a>
+        </div>
+
+        <div class="video-frame" data-reveal="scale">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/video-placeholder.svg" width="720" height="1280" alt="Espaço reservado para depoimento em vídeo" loading="lazy">
+        </div>
+
+        <div class="video-frame" data-reveal="scale">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/video-placeholder.svg" width="720" height="1280" alt="Espaço reservado para depoimento em vídeo" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="galeria">
+      <div class="section-head">
+        <div class="section-head__text" data-reveal>
+          <span class="eyebrow">No dia a dia</span>
+          <h2 class="title title--lg">Atendimentos <span class="accent">de verdade.</span></h2>
+        </div>
+        <p class="section-head__note" data-reveal="fade" data-reveal-delay="80">Um pouco da rotina, em movimento.</p>
+      </div>
+
+      <div class="marquee-mask marquee-mask--section" data-reveal="fade" data-reveal-delay="120">
+        <div class="marquee" data-sc-marquee>
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-01-casa.svg" width="800" height="1000" alt="Ilustração de casa" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-02-consulta.svg" width="800" height="1000" alt="Ilustração de consulta veterinária" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-03-vacina.svg" width="800" height="1000" alt="Ilustração de vacinação" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="Ilustração de coelho" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="Ilustração de ave" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="Ilustração de cachorro" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="Ilustração de gato" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-08-jabuti.svg" width="800" height="1000" alt="Ilustração de jabuti" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-09-roedor.svg" width="800" height="1000" alt="Ilustração de pequeno roedor" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-10-exame.svg" width="800" height="1000" alt="Ilustração de exame laboratorial" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-01-casa.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-02-consulta.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-03-vacina.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-08-jabuti.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-09-roedor.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+          <img class="marquee__img--gallery" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-10-exame.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="beneficios">
+      <div class="section-head section-head--40">
+        <div class="section-head__text section-head__text--wide" data-reveal>
+          <span class="eyebrow">Por que em casa</span>
+          <h2 class="title title--lg">Nem todo animal se sente bem numa clínica. <span class="accent">Em casa, ele é ele mesmo.</span></h2>
+        </div>
+        <p class="section-head__note section-head__note--wide benefits-note" data-reveal="fade" data-reveal-delay="80">Sem trânsito, sem espera e sem contato com outros animais — e uma avaliação mais natural do comportamento do seu pet.</p>
+      </div>
+
+      <div class="benefits-grid" data-bento>
+        <div class="benefits-photo" data-reveal="scale">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/beneficios-casa.svg" alt="Ilustração de casa com estetoscópio e gato" loading="lazy" width="1024" height="1280">
+        </div>
+
+        <div class="features" data-grid4 data-reveal-group="80">
+          <div class="feature" data-reveal>
+            <span class="icon-tile"><i class="icon-heart-pulse" aria-hidden="true"></i></span>
+            <h3 class="feature__title">Menos estresse</h3>
+            <p class="feature__text">Em ambiente conhecido o pet fica mais seguro — e estresse baixo protege a imunidade.</p>
+          </div>
+
+          <div class="feature" data-reveal>
+            <span class="icon-tile"><i class="icon-sofa" aria-hidden="true"></i></span>
+            <h3 class="feature__title">Mais comodidade</h3>
+            <p class="feature__text feature__text--wine">Horário agendado, no seu sofá.</p>
+          </div>
+
+          <div class="feature" data-reveal>
+            <span class="icon-tile"><i class="icon-fingerprint" aria-hidden="true"></i></span>
+            <h3 class="feature__title">Individualizado</h3>
+            <p class="feature__text">Rotina, histórico e espécie guiam cada consulta.</p>
+          </div>
+
+          <div class="feature feature--cta" data-reveal>
+            <span class="icon-tile"><i class="icon-shield-check" aria-hidden="true"></i></span>
+            <div class="feature__body">
+              <h3 class="feature__title">Prevenção e acompanhamento</h3>
+              <p class="feature__text">Os primeiros sinais são pequenos. Cuidar antes é o melhor remédio.</p>
+            </div>
+            <a class="link-cta" href="https://wa.me/5511912345678" target="_blank" rel="noopener noreferrer" data-wa>Agendar check-up <i class="icon-arrow-up-right" aria-hidden="true"></i></a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="servicos">
+      <div class="section-head--simple" data-reveal>
+        <span class="eyebrow">Serviços</span>
+        <h2 class="title title--lg">Do primeiro mês à <span class="accent">terceira idade.</span></h2>
+      </div>
+
+      <div class="grid4" data-grid4 data-reveal-group="80">
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><i class="icon-baby" aria-hidden="true"></i></span>
+          <div>
+            <h3 class="service-card__title">Consulta pediátrica</h3>
+            <p class="service-card__text">Os primeiros meses definem a saúde futura: avaliação completa, alimentação, socialização e orientação para o tutor.</p>
+          </div>
+        </article>
+
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><i class="icon-syringe" aria-hidden="true"></i></span>
+          <div>
+            <h3 class="service-card__title">Protocolo de vacinas e vermífugos</h3>
+            <p class="service-card__text">Definido pela idade, estilo de vida e riscos de exposição — aplicação em casa e carteira sempre em dia.</p>
+          </div>
+        </article>
+
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><i class="icon-stethoscope" aria-hidden="true"></i></span>
+          <div>
+            <h3 class="service-card__title">Consulta preventiva</h3>
+            <p class="service-card__text">Check-up completo mesmo sem sinais de doença: detecção precoce e orientação de alimentação, ambiente e higiene.</p>
+          </div>
+        </article>
+
+        <article class="service-card" data-reveal>
+          <span class="service-card__icon"><i class="icon-heart-handshake" aria-hidden="true"></i></span>
+          <div>
+            <h3 class="service-card__title">Consulta geriátrica</h3>
+            <p class="service-card__text">Acompanhamento do pet idoso — dor, mobilidade e qualidade de vida — sem o estresse do deslocamento.</p>
+          </div>
+        </article>
+      </div>
+
+      <div class="service-panel" data-reveal data-reveal-delay="100">
+        <div class="service-list">
+          <div class="service-list__item"><i class="icon-flask-conical" aria-hidden="true"></i><span>Coleta para exames</span></div>
+          <div class="service-list__item"><i class="icon-scan-line" aria-hidden="true"></i><span>Microchipagem</span></div>
+          <div class="service-list__item"><i class="icon-plane" aria-hidden="true"></i><span>Protocolo de viagens</span></div>
+          <div class="service-list__item"><i class="icon-hospital" aria-hidden="true"></i><span>Acompanhamento cirúrgico</span></div>
+          <div class="service-list__item"><i class="icon-pill" aria-hidden="true"></i><span>Medicações e fluidoterapia</span></div>
+          <div class="service-list__item"><i class="icon-bandage" aria-hidden="true"></i><span>Curativos e feridas</span></div>
+        </div>
+        <div class="service-panel__footer">
+          <p>Não encontrou o que precisa? Pergunte — a gente direciona.</p>
+          <a class="btn btn--wine btn--services" href="https://wa.me/5511912345678" target="_blank" rel="noopener noreferrer" data-wa>
+            <i class="icon-message-circle" aria-hidden="true"></i> Falar sobre meu pet
+          </a>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section section--booking" id="agendamento">
+      <div class="section-head section-head--simple booking-head" data-reveal>
+        <span class="eyebrow">Agendamento online</span>
+        <h2 class="title title--lg">Agende em <span class="accent">poucos passos.</span></h2>
+        <p class="section-head__note">A Dra. Helena confirma via WhatsApp em até 24h.</p>
+      </div>
+
+      <div class="bk-wrap" data-reveal data-reveal-delay="100">
+        <p class="sr-only" id="step-status" aria-live="polite"></p>
+
+        <ol class="bk-prog" aria-label="Etapas do agendamento">
+          <li class="bk-step is-on" id="ps1" aria-current="step"><span class="bk-step-n" aria-hidden="true">1</span><span class="bk-step-lbl">Serviço</span></li>
+          <li class="bk-step" id="ps2"><span class="bk-step-n" aria-hidden="true">2</span><span class="bk-step-lbl">Data &amp; Hora</span></li>
+          <li class="bk-step" id="ps3"><span class="bk-step-n" aria-hidden="true">3</span><span class="bk-step-lbl">Dados</span></li>
+          <li class="bk-step" id="ps4"><span class="bk-step-n" aria-hidden="true">4</span><span class="bk-step-lbl">Confirmação</span></li>
+        </ol>
+
+        <div class="bk-body">
+
+          
+          <div class="bk-panel is-on" id="pn1" role="region" aria-labelledby="pn1-h">
+            <h3 class="bk-panel-title" id="pn1-h" tabindex="-1">Qual serviço você precisa?</h3>
+            <p class="bk-panel-sub">Selecione o tipo de atendimento desejado.</p>
+
+            <div class="bk-services">
+              <button class="bk-service" type="button" data-service="Consulta Geral">
+                <span class="bk-service-icon" aria-hidden="true"><i class="icon-stethoscope"></i></span>
+                <span class="bk-service-info">
+                  <span class="bk-service-name">Consulta Geral</span>
+                  <span class="bk-service-desc">Avaliação clínica completa do seu pet</span>
+                </span>
+                <span class="bk-service-check" aria-hidden="true"></span>
+              </button>
+
+              <button class="bk-service" type="button" data-service="Vacinação">
+                <span class="bk-service-icon" aria-hidden="true"><i class="icon-syringe"></i></span>
+                <span class="bk-service-info">
+                  <span class="bk-service-name">Vacinação</span>
+                  <span class="bk-service-desc">Vacinas com cadeia de frio garantida</span>
+                </span>
+                <span class="bk-service-check" aria-hidden="true"></span>
+              </button>
+
+              <button class="bk-service" type="button" data-service="Atestado de Saúde">
+                <span class="bk-service-icon" aria-hidden="true"><i class="icon-clipboard-check"></i></span>
+                <span class="bk-service-info">
+                  <span class="bk-service-name">Atestado de Saúde</span>
+                  <span class="bk-service-desc">Viagens, hospedagens e documentação</span>
+                </span>
+                <span class="bk-service-check" aria-hidden="true"></span>
+              </button>
+            </div>
+
+            <button class="bk-btn bk-btn--primary" id="b1" type="button" data-go="2" disabled>Próximo →</button>
+          </div>
+
+          
+          <div class="bk-panel" id="pn2" role="region" aria-labelledby="pn2-h">
+            <h3 class="bk-panel-title" id="pn2-h" tabindex="-1">Escolha a data e horário</h3>
+            <p class="bk-panel-sub">Informe sua preferência — será confirmada pela Dra. Helena.</p>
+
+            <div class="bk-cal">
+              <div class="bk-cal-top">
+                <button class="bk-cal-nav" id="cal-prev" type="button" aria-label="Mês anterior">‹</button>
+                <div class="bk-cal-month" id="cl" aria-live="polite"></div>
+                <button class="bk-cal-nav" id="cal-next" type="button" aria-label="Próximo mês">›</button>
+              </div>
+              <div class="bk-cal-grid" id="cg" role="group" aria-label="Dias disponíveis"></div>
+            </div>
+
+            <div id="ta" hidden>
+              <div class="bk-note">
+                <i class="icon-triangle-alert" aria-hidden="true"></i>
+                <div><strong>Sujeito à confirmação</strong>A data e horário serão avaliados pela Dra. Helena e confirmados via WhatsApp em até 24h. Caso indisponível, ela entrará em contato para reagendar.</div>
+              </div>
+
+              <div class="bk-period"><i class="icon-sunrise" aria-hidden="true"></i> Manhã</div>
+              <div class="bk-slots" id="sm" role="group" aria-label="Horários da manhã"></div>
+
+              <div class="bk-period"><i class="icon-sunset" aria-hidden="true"></i> Tarde</div>
+              <div class="bk-slots" id="st" role="group" aria-label="Horários da tarde"></div>
+            </div>
+
+            <div class="bk-actions">
+              <button class="bk-btn bk-btn--secondary" type="button" data-go="1">← Voltar</button>
+              <button class="bk-btn bk-btn--primary" id="b2" type="button" data-go="3" disabled>Próximo →</button>
+            </div>
+          </div>
+
+          
+          <div class="bk-panel" id="pn3" role="region" aria-labelledby="pn3-h">
+            <h3 class="bk-panel-title" id="pn3-h" tabindex="-1">Dados do tutor e pet</h3>
+            <p class="bk-panel-sub">Para a Dra. Helena se preparar para a visita.</p>
+
+            <div class="bk-fieldset">
+              <h4 class="bk-legend"><i class="icon-user" aria-hidden="true"></i> Sobre você</h4>
+              <div class="bk-row">
+                <div class="bk-field" id="ff1">
+                  <label for="i1">Nome completo *</label>
+                  <input type="text" id="i1" name="tutor" placeholder="Seu nome" autocomplete="name" required aria-required="true" aria-describedby="e1">
+                  <div class="bk-error" id="e1" role="alert">Obrigatório</div>
+                </div>
+                <div class="bk-field" id="ff2">
+                  <label for="i2">WhatsApp *</label>
+                  <input type="tel" id="i2" name="whatsapp" placeholder="(11) 99999-9999" inputmode="tel" autocomplete="tel" required aria-required="true" aria-describedby="e2">
+                  <div class="bk-error" id="e2" role="alert">Obrigatório</div>
+                </div>
+              </div>
+            </div>
+
+            <div class="bk-fieldset">
+              <h4 class="bk-legend"><i class="icon-paw-print" aria-hidden="true"></i> Sobre o pet</h4>
+              <div class="bk-row">
+                <div class="bk-field" id="ff3">
+                  <label for="i3">Nome do pet *</label>
+                  <input type="text" id="i3" name="pet" placeholder="Ex: Bolinha" required aria-required="true" aria-describedby="e3">
+                  <div class="bk-error" id="e3" role="alert">Obrigatório</div>
+                </div>
+                <div class="bk-field" id="ff4">
+                  <label for="i4">Espécie *</label>
+                  <select id="i4" name="especie" required aria-required="true" aria-describedby="e4">
+                    <option value="">Selecione</option>
+                    <option>Cão</option>
+                    <option>Gato</option>
+                    <option>Ave</option>
+                    <option>Coelho</option>
+                    <option>Roedor</option>
+                    <option>Réptil</option>
+                    <option>Outro</option>
+                  </select>
+                  <div class="bk-error" id="e4" role="alert">Obrigatório</div>
+                </div>
+              </div>
+              <div class="bk-row">
+                <div class="bk-field">
+                  <label for="i5">Raça</label>
+                  <input type="text" id="i5" name="raca" placeholder="Ex: SRD, Golden...">
+                </div>
+                <div class="bk-field">
+                  <label for="i6">Idade</label>
+                  <input type="text" id="i6" name="idade" placeholder="Ex: 3 anos">
+                </div>
+              </div>
+            </div>
+
+            <div class="bk-fieldset">
+              <h4 class="bk-legend"><i class="icon-map-pin" aria-hidden="true"></i> Endereço de atendimento</h4>
+              <div class="bk-row bk-row--full">
+                <div class="bk-field" id="ff5">
+                  <label for="i7">Rua e número *</label>
+                  <input type="text" id="i7" name="endereco" placeholder="Ex: Rua das Flores, 123" autocomplete="street-address" required aria-required="true" aria-describedby="e5">
+                  <div class="bk-error" id="e5" role="alert">Obrigatório</div>
+                </div>
+              </div>
+              <div class="bk-row">
+                <div class="bk-field">
+                  <label for="i8">Bairro</label>
+                  <input type="text" id="i8" name="bairro" placeholder="Bairro">
+                </div>
+                <div class="bk-field">
+                  <label for="i9">Complemento</label>
+                  <input type="text" id="i9" name="complemento" placeholder="Apto, bloco...">
+                </div>
+              </div>
+              <div class="bk-row bk-row--full">
+                <div class="bk-field">
+                  <label for="i10">Observações</label>
+                  <textarea id="i10" name="observacoes" placeholder="Alergias, comportamento, outros detalhes..."></textarea>
+                </div>
+              </div>
+            </div>
+
+            <div class="bk-actions">
+              <button class="bk-btn bk-btn--secondary" type="button" data-go="2">← Voltar</button>
+              <button class="bk-btn bk-btn--primary" id="b-review" type="button">Revisar agendamento →</button>
+            </div>
+          </div>
+
+          
+          <div class="bk-panel" id="pn4" role="region" aria-labelledby="pn4-h">
+            <div class="bk-confirm">
+              <div class="bk-confirm-icon" aria-hidden="true"><i class="icon-circle-check"></i></div>
+              <h3 id="pn4-h" tabindex="-1">Quase lá!</h3>
+              <p>Revise e envie pelo WhatsApp para confirmar.</p>
+            </div>
+
+            <div class="bk-summary" id="smr" aria-live="polite"></div>
+
+            <div class="bk-note bk-note--info">
+              <i class="icon-message-circle" aria-hidden="true"></i>
+              <div>Ao clicar abaixo você vai para o WhatsApp da Dra. Helena com a mensagem já preenchida. O agendamento será confirmado em até 24h.</div>
+            </div>
+
+            <a class="bk-btn-wa" id="wal" href="#" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+              Confirmar pelo WhatsApp
+            </a>
+
+            <button class="bk-btn bk-btn--secondary bk-btn--mt" type="button" data-go="3">← Editar dados</button>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="sobre">
+      <div class="about-grid">
+        <div class="about-photo" data-reveal="scale">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sobre-vet.svg" alt="Ilustração de veterinária segurando um coelho" loading="lazy" width="1024" height="1280">
+        </div>
+
+        <div class="about-copy" data-reveal>
+          <span class="eyebrow">Sobre a Dra. Helena</span>
+          <p class="about-quote">"O cuidado vai muito além do tratamento: começa com escuta, respeito e vínculo."</p>
+          <p class="about-text">Olá! Sou Helena Prado, médica-veterinária apaixonada por saúde preventiva e pelo bem-estar de cães, gatos e pets exóticos. Atendo em domicílio para que cada consulta aconteça com calma, no ambiente em que o seu pet se sente seguro. Meu compromisso é explicar cada etapa, montar um plano de cuidado possível para a sua rotina e acompanhar de perto entre as visitas.</p>
+          <div class="about-sign">
+            <div class="about-sign__inner">
+              <span class="about-sign__name">Dra. Helena Prado</span>
+              <span class="about-sign__role">Médica-veterinária · <span data-config="crmv">CRMV 00000-SP</span></span>
+            </div>
+          </div>
+        </div>
+
+        <div class="partner-cards" data-reveal-group="70">
+          <div class="mini-card" data-reveal><i class="icon-hospital" aria-hidden="true"></i><strong>Clínicas parceiras</strong><span>Cirurgias e casos que pedem estrutura hospitalar.</span></div>
+          <div class="mini-card" data-reveal><i class="icon-flask-conical" aria-hidden="true"></i><strong>Laboratórios</strong><span>Exames para diagnóstico e acompanhamento.</span></div>
+          <div class="mini-card" data-reveal><i class="icon-message-circle" aria-hidden="true"></i><strong>Suporte no WhatsApp</strong><span>Orientação e teleconsulta após a visita.</span></div>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section" id="ebook">
+      <div class="section-head section-head--40">
+        <div class="section-head__text">
+          <span class="eyebrow">E-books gratuitos</span>
+          <h2 class="title title--lg">Informação também <span class="accent">é cuidado.</span></h2>
+        </div>
+      </div>
+
+      <div class="ebook-grid">
+        <a class="ebook-card" href="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/docs/coprofagia.pdf" target="_blank" rel="noopener noreferrer">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/capa-coprofagia.svg" alt="Capa do guia sobre coprofagia" loading="lazy" width="655" height="1024">
+          <div class="ebook-card__body">
+            <div><strong class="ebook-card__title">Coprofagia</strong><div class="ebook-card__sub">Entenda, previna e trate.</div></div>
+            <i class="ebook-card__icon icon-download" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <a class="ebook-card" href="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/docs/primeiro-pet.pdf" target="_blank" rel="noopener noreferrer">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/capa-primeiro-pet.svg" alt="Capa do guia Seu Primeiro Pet" loading="lazy" width="655" height="1024">
+          <div class="ebook-card__body">
+            <div><strong class="ebook-card__title">Seu Primeiro Pet</strong><div class="ebook-card__sub">Cães e gatos: por onde começar.</div></div>
+            <i class="ebook-card__icon icon-download" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <a class="ebook-card" href="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/docs/primeiro-pet-exotico.pdf" target="_blank" rel="noopener noreferrer">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/capa-primeiro-pet-exotico.svg" alt="Capa do guia Seu Primeiro Pet Exótico" loading="lazy" width="655" height="1024">
+          <div class="ebook-card__body">
+            <div><strong class="ebook-card__title">Seu Primeiro Pet Exótico</strong><div class="ebook-card__sub">Para um companheiro diferente.</div></div>
+            <i class="ebook-card__icon icon-download" aria-hidden="true"></i>
+          </div>
+        </a>
+
+        <a class="ebook-card" href="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/docs/psitacideos.pdf" target="_blank" rel="noopener noreferrer">
+          <img decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/capa-psitacideos.svg" alt="Capa do guia sobre psitacídeos" loading="lazy" width="655" height="1024">
+          <div class="ebook-card__body">
+            <div><strong class="ebook-card__title">Psitacídeos</strong><div class="ebook-card__sub">Alimentação e ambiente ideais.</div></div>
+            <i class="ebook-card__icon icon-download" aria-hidden="true"></i>
+          </div>
+        </a>
+      </div>
+    </section>
+
+    
+    <section class="section" id="faq">
+      <div class="bento bento--faq" data-bento>
+        <div class="faq-intro" data-reveal>
+          <span class="eyebrow">Dúvidas</span>
+          <h2 class="title title--md">Perguntas <span class="accent">frequentes</span></h2>
+          <p>Não achou sua resposta? Mande uma mensagem.</p>
+        </div>
+
+        <div class="faq-list" data-keep data-reveal-group="55">
+          <details class="faq-item" data-sc-faq data-reveal open>
+            <summary><span>Onde a VetCasa atende?</span><i class="icon-minus" aria-hidden="true"></i></summary>
+            <div class="faq-item__answer">Centro, Jardim das Flores, Vila Nova e bairros vizinhos — atendimento domiciliar com hora marcada.</div>
+          </details>
+
+          <details class="faq-item" data-sc-faq data-reveal>
+            <summary><span>Quanto tempo dura uma consulta domiciliar?</span><i class="icon-plus" aria-hidden="true"></i></summary>
+            <div class="faq-item__answer">Depende das necessidades do paciente. Em média, de 60 minutos a 1h30.</div>
+          </details>
+
+          <details class="faq-item" data-sc-faq data-reveal>
+            <summary><span>Quais serviços podem ser feitos em casa?</span><i class="icon-plus" aria-hidden="true"></i></summary>
+            <div class="faq-item__answer">• Vacinação e vermifugação
+• Protocolo para viagens nacionais e internacionais
+• Microchipagem
+• Consultas pediátricas e geriátricas
+• Consultas para pets não convencionais
+• Coleta de materiais para exames
+• Medicações e fluidoterapia subcutânea
+• Corte de asas, penas, bicos e unhas
+• Curativos e limpeza de feridas
+• Acompanhamento pré e pós-cirúrgico</div>
+          </details>
+
+          <details class="faq-item" data-sc-faq data-reveal>
+            <summary><span>Quais pets são atendidos?</span><i class="icon-plus" aria-hidden="true"></i></summary>
+            <div class="faq-item__answer">Cães, gatos e pets não convencionais: coelhos, porquinhos-da-índia, chinchilas, aves, pequenos roedores, tigres-d'água e jabutis — sempre considerando as necessidades de cada espécie.</div>
+          </details>
+
+          <details class="faq-item" data-sc-faq data-reveal>
+            <summary><span>O atendimento domiciliar serve para emergências?</span><i class="icon-plus" aria-hidden="true"></i></summary>
+            <div class="faq-item__answer">É voltado a consultas, exames, vacinação e casos de pouca urgência. Mande sua mensagem: ajudamos a avaliar o caso e, se preciso, direcionamos para a clínica parceira mais próxima.</div>
+          </details>
+
+          <details class="faq-item" data-sc-faq data-reveal>
+            <summary><span>Quais são as formas de pagamento?</span><i class="icon-plus" aria-hidden="true"></i></summary>
+            <div class="faq-item__answer">Pagamento no momento do atendimento, via Pix, cartão ou dinheiro.</div>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    
+    <section class="section section--cta">
+      <div class="cta-panel">
+        <div class="cta-copy" data-reveal>
+          <div class="cta-copy__inner">
+            <h2 class="title title--2xl">Ele não consegue dizer quando algo <span class="accent">não está bem.</span></h2>
+            <p class="cta-copy__text">Por isso a prevenção é o melhor remédio. Agende a visita da Dra. Helena.</p>
+          </div>
+          <a class="btn btn--deep btn--final" href="#agendamento">
+            <span class="btn__badge btn__badge--lg"><i class="icon-calendar-days" aria-hidden="true"></i></span>
+            Agendar visita
+          </a>
+        </div>
+
+        <div class="cta-strip" data-cta-strip data-reveal="fade" data-reveal-delay="120">
+          <div class="cta-fade" data-cta-fade aria-hidden="true"></div>
+          <div class="cta-mask" data-cta-mask>
+            <div class="marquee marquee--pets" data-sc-marquee>
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="Ilustração de cachorro" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="Ilustração de gato" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="Ilustração de coelho" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="Ilustração de ave" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-09-roedor.svg" width="800" height="1000" alt="Ilustração de porquinho-da-índia" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-08-jabuti.svg" width="800" height="1000" alt="Ilustração de jabuti" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="Ilustração de arara" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="Ilustração de coelho" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="Ilustração de cachorro" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="Ilustração de gato" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-11-jardim.svg" width="800" height="1000" alt="Ilustração de folhas" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-09-roedor.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-08-jabuti.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-05-ave.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-04-coelho.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-06-cao.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-07-gato.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+              <img class="marquee__img--pets" decoding="async" src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/assets/img/art/sil-11-jardim.svg" width="800" height="1000" alt="" aria-hidden="true" loading="lazy">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  
+  <section class="section--contact" id="contato">
+    <div class="contact-grid" data-reveal-group="70">
+      <a class="contact-card contact-card--wine" data-reveal href="https://wa.me/5511912345678" target="_blank" rel="noopener noreferrer" data-wa>
+        <i class="contact-card__icon icon-message-circle" aria-hidden="true"></i>
+        <span class="contact-card__label">WhatsApp</span>
+        <strong class="contact-card__value" data-config="phoneDisplay">(11) 91234-5678</strong>
+      </a>
+
+      <a class="contact-card contact-card--soft" data-reveal href="mailto:contato@vetcasa.com.br" data-mail>
+        <i class="contact-card__icon icon-mail" aria-hidden="true"></i>
+        <span class="contact-card__label">E-mail</span>
+        <strong class="contact-card__value contact-card__value--email" data-config="email">contato@vetcasa.com.br</strong>
+      </a>
+
+      <a class="contact-card contact-card--soft" data-reveal href="https://www.instagram.com/vetcasa.demo" target="_blank" rel="noopener noreferrer" data-social="instagram">
+        <i class="contact-card__icon icon-instagram" aria-hidden="true"></i>
+        <span class="contact-card__label">Instagram</span>
+        <strong class="contact-card__value">@vetcasa.demo</strong>
+      </a>
+
+      <a class="contact-card contact-card--soft" data-reveal href="https://www.facebook.com/vetcasa.demo" target="_blank" rel="noopener noreferrer" data-social="facebook">
+        <i class="contact-card__icon icon-facebook" aria-hidden="true"></i>
+        <span class="contact-card__label">Facebook</span>
+        <strong class="contact-card__value">@vetcasa.demo</strong>
+      </a>
+    </div>
+  </section>
+
+  
+  <div class="mobile-bar" data-mobile-bar>
+    <a class="mobile-bar__cta" href="#agendamento">
+      <i class="icon-calendar-days" aria-hidden="true"></i> Agendar visita
+    </a>
+  </div>
+
+  
+  <footer class="site-footer">
+    <div class="site-footer__inner" data-reveal="fade">
+      <p class="site-footer__text">© 2026 VetCasa. Todos os direitos reservados. Modelo demonstrativo — dados fictícios.</p>
+      <svg class="site-footer__logo" viewBox="0 0 420 120" role="img" aria-label="VetCasa">
+        <g transform="translate(14 24) scale(1.12)">
+          <circle cx="32" cy="32" r="32" fill="#f8f3ee"/>
+          <path d="M14 31.5 32 16l18 15.5" fill="none" stroke="#6e121b" stroke-width="3.4" stroke-linecap="round" stroke-linejoin="round"/>
+          <path d="M18.5 31.5V48h27V31.5" fill="none" stroke="#813538" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" opacity=".6"/>
+          <g fill="#6e121b">
+            <ellipse cx="32" cy="41.6" rx="6.1" ry="5.1"/>
+            <circle cx="24.6" cy="35.4" r="2.5"/>
+            <circle cx="29.5" cy="32.6" r="2.5"/>
+            <circle cx="34.5" cy="32.6" r="2.5"/>
+            <circle cx="39.4" cy="35.4" r="2.5"/>
+          </g>
+        </g>
+        <text x="106" y="66" font-family="'Bricolage Grotesque','Segoe UI',Arial,sans-serif" font-weight="700" font-size="38" letter-spacing="-1.2" fill="#f8f3ee">VetCasa</text>
+        <text x="108" y="88" font-family="'Hanken Grotesk','Segoe UI',Arial,sans-serif" font-weight="600" font-size="11" letter-spacing="3" fill="#f2d7c9">VETERINÁRIA EM CASA</text>
+      </svg>
+    </div>
+  </footer>
+
+  <a class="wa-float" data-wa href="https://wa.me/5511912345678" target="_blank" rel="noopener noreferrer" aria-label="Falar no WhatsApp">
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="wa-float__label">WhatsApp</span>
+  </a>
+
+  <button class="to-top" data-to-top type="button" aria-label="Voltar ao topo" hidden>
+    <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 5l-7 7M12 5l7 7M12 5v14" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+  </button>
+
+  <dialog class="app-modal" data-lightbox aria-label="Imagem ampliada">
+    <form method="dialog"><button class="app-modal__close" type="submit" aria-label="Fechar">×</button></form>
+    <figure class="app-modal__figure"><img data-lightbox-img alt=""><figcaption data-lightbox-cap></figcaption></figure>
+  </dialog>
+
+  <script src="https://cdn.jsdelivr.net/gh/Mateus-TDM/vetcasa-demo@v1.0.0/dist/app.js" integrity="sha384-MsmrncXiD9b3AYqV1kHR8ocNmfXDVjVebPGKtBx4PiQuvxdLcsTHA6j05nvDXXz9" crossorigin="anonymous" defer></script>
+  
+  
+  
+  
+</body>
+</html>

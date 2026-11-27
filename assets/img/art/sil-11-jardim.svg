@@ -1,0 +1,24 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Silhueta de folhas e pata">
+  <rect width="800" height="1000" fill="#e4ecc4"/>
+  <circle cx="660" cy="210" r="200" fill="#f8f3ee" opacity=".75"/>
+  <circle cx="120" cy="860" r="220" fill="#f8f3ee" opacity=".4"/>
+  <rect x="30" y="30" width="740" height="940" rx="56" fill="none" stroke="#4a5a2c" stroke-width="4" opacity=".25"/>
+  <g fill="none" stroke="#4a5a2c" stroke-width="18" stroke-linecap="round">
+    <path d="M400 700V320"/>
+    <path d="M400 520c-90 0-140-44-140-118 90 0 140 44 140 118Z" fill="#4a5a2c"/>
+    <path d="M400 600c90 0 140-44 140-118-90 0-140 44-140 118Z" fill="#4a5a2c"/>
+    <path d="M400 680c-70 0-110-34-110-92 70 0 110 34 110 92Z" fill="#4a5a2c"/>
+    <path d="M400 460c70 0 110-34 110-92-70 0-110 34-110 92Z" fill="#4a5a2c"/>
+  </g>
+  <g fill="#4a5a2c">
+    <ellipse cx="400" cy="806" rx="52" ry="42"/>
+    <circle cx="336" cy="752" r="20"/>
+    <circle cx="382" cy="732" r="20"/>
+    <circle cx="424" cy="732" r="20"/>
+    <circle cx="468" cy="752" r="20"/>
+  </g>
+  <g fill="#4a5a2c" opacity=".45">
+    <circle cx="660" cy="828" r="9"/>
+    <circle cx="624" cy="864" r="6"/>
+  </g>
+</svg>

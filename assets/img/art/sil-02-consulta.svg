@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" width="800" height="1000" role="img" aria-label="Silhueta de estetoscópio com coração">
+  <rect width="800" height="1000" fill="#6e121b"/>
+  <circle cx="690" cy="180" r="210" fill="#870611" opacity=".65"/>
+  <circle cx="120" cy="880" r="240" fill="#4c0108" opacity=".55"/>
+  <rect x="30" y="30" width="740" height="940" rx="56" fill="none" stroke="#f2d7c9" stroke-width="4" opacity=".3"/>
+  <g fill="none" stroke="#f2d7c9" stroke-width="26" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M286 306v96c0 128 60 214 152 214s152-86 152-214v-96"/>
+    <path d="M286 306a34 34 0 1 1-68 0 34 34 0 0 1 68 0Z"/>
+    <path d="M542 306a34 34 0 1 0 68 0 34 34 0 0 0-68 0Z"/>
+    <path d="M438 616v64"/>
+  </g>
+  <path d="M512 780c-62-52-128-10-128 44 0 56 74 96 128 140 54-44 128-84 128-140 0-54-66-96-128-44Z" fill="#f2d7c9"/>
+  <circle cx="470" cy="700" r="22" fill="#f2d7c9"/>
+  <g fill="#f2d7c9" opacity=".45">
+    <circle cx="140" cy="200" r="9"/>
+    <circle cx="182" cy="234" r="6"/>
+    <circle cx="676" cy="830" r="8"/>
+  </g>
+</svg>
