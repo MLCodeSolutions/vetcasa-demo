@@ -4,7 +4,9 @@ Site institucional demonstrativo da **VetCasa** (veterinária domiciliar fictíc
 
 > **Dados fictícios.** Marca, textos, contatos, CRMV e PDFs são de demonstração. Não use o WhatsApp/e-mail publicados como contato real. Troque em `src/js/site-config.js` antes de um uso de produção.
 
-> **Estado do CDN (importante).** A tag `v1.0.0` foi publicada no GitHub, mas o jsDelivr ainda **não a indexou** (`@v1.0.0` → 404), enquanto `@main` e o commit `a930cdce5788f86855364bf047227c2a577d0e21` respondem 200. Os assets continuam nesse commit imutável. A **nova intro** está na página do commit `ca99ce86ed9a3721cc1c3ae99c20837756671cfb`; o loader `dist/embed.html` busca essa página e usa `window.__vcBootAt` para a intro contar 1 s a partir do `document.write` (não do fetch). A tag `v1.0.3` marca o build com a intro; pode ficar 404 no CDN até o jsDelivr indexar.
+> **Estado do CDN (importante).** A tag `v1.0.0` foi publicada no GitHub, mas o jsDelivr ainda **não a indexou** (`@v1.0.0` → 404), enquanto `@main` e o commit `a930cdce5788f86855364bf047227c2a577d0e21` respondem 200. Os assets continuam nesse commit imutável. A **nova intro** está na página do commit `fc82ef19d28981263d8fc38d632905d5e0a4e430`; o loader `dist/embed.html` busca essa página e usa `window.__vcBootAt` para a intro contar 1 s a partir do `document.write` (não do fetch). A tag `v1.0.4` marca o build com a intro; pode ficar 404 no CDN até o jsDelivr indexar.
+
+> **Efeitos e animações (v1.0.4).** Reveals, marquee, digitação, contadores, hover, FAQ, booking e lightbox ficam ativos no desktop e em **celulares normais**. O reveal do hero só começa depois do boot; a intro (anel/pontinhos) anima também no celular. O modo lite agora liga apenas com `saveData`, 2G ou `prefers-reduced-data`; `prefers-reduced-motion` continua desligando as animações.
 
 ## Estrutura
 
@@ -25,7 +27,7 @@ dist/
   index.html        completo, CSS/JS inline, assets absolutos no jsDelivr
   index-external.html  alternativa com app.css/app.js + SRI (não usada nesta entrega)
   app.css / app.js  usados só pela variante external
-  embed.html        loader (~3,5 KB) para o campo do Google Sites
+  embed.html        loader (~3,8 KB) para o campo do Google Sites
   manifest.json     inventário legível por máquina
   manifest.md       tabela arquivo → URL → tipo → tamanho
 _tools/
@@ -41,16 +43,16 @@ Todo asset usa a tag fixa (nunca `@main`, nunca `raw.githubusercontent.com`, nun
 
 ```
 # página da nova intro (commit, testada 200)
-https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@ca99ce86ed9a3721cc1c3ae99c20837756671cfb/dist/index.html
+https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@fc82ef19d28981263d8fc38d632905d5e0a4e430/dist/index.html
 
 # assets (commit imutável, testado 200)
 https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@a930cdce5788f86855364bf047227c2a577d0e21/<caminho>
 
 # canônica da intro (aguardando indexação do jsDelivr)
-https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.3/<caminho>
+https://cdn.jsdelivr.net/gh/MLCodeSolutions/vetcasa-demo@v1.0.4/<caminho>
 ```
 
-> **OWNER:** `MLCodeSolutions`. Página da intro: `ca99ce86ed9a3721cc1c3ae99c20837756671cfb`; assets: `a930cdce5788f86855364bf047227c2a577d0e21`.
+> **OWNER:** `MLCodeSolutions`. Página da intro: `fc82ef19d28981263d8fc38d632905d5e0a4e430`; assets: `a930cdce5788f86855364bf047227c2a577d0e21`.
 
 A tabela completa, com tipo e bytes, é gerada em [`dist/manifest.md`](dist/manifest.md). Resumo:
 
@@ -63,8 +65,8 @@ A tabela completa, com tipo e bytes, é gerada em [`dist/manifest.md`](dist/mani
 | PDFs | 4 | `assets/docs/*.pdf` | application/pdf | 1,4–1,5 KB |
 | Fontes | 9 | `assets/fonts/*.woff2` | font/woff2 | 11–214 KB |
 | Vídeos | 0 | — | — | — |
-| Página | 1 | `dist/index.html` (intro, commit) | text/html | 224,0 KB |
-| Loader | 1 | `dist/embed.html` | text/html | ~3,5 KB |
+| Página | 1 | `dist/index.html` (intro, commit) | text/html | 224,3 KB |
+| Loader | 1 | `dist/embed.html` | text/html | ~3,8 KB |
 | CSS/JS externos | 2 | `dist/app.css`, `dist/app.js` | text/css, text/javascript | 134,2 / 29,4 KB |
 
 > As ilustrações são SVG (vetoriais). Por isso não há versões 600/1200 px: a regra de raster não se aplica. Se fotos raster forem adicionadas, gere WebP 600 e 1200 px.
@@ -94,9 +96,9 @@ O teste local pode ser servido com `python -m http.server 8765` na raiz e `http:
 
 ### Tamanho e limite do Google Sites
 
-- `dist/index.html` (intro, commit): **224,0 KB**.
+- `dist/index.html` (intro, commit): **224,3 KB**.
 - Somente o HTML (variante external): **53,6 KB**.
-- `dist/embed.html`: **~3,5 KB** (mostra a marca enquanto busca a página, depois o boot completo).
+- `dist/embed.html`: **~3,8 KB** (mostra a marca enquanto busca a página, depois o boot completo).
 
 Há relatos de limite de ~10.000 caracteres no campo “Incorporar código”, mas **não trate isso como certo**: cole e teste. Se o campo recusar/truncar o arquivo completo, use `dist/embed.html`. Ele busca no jsDelivr a página do commit, marca `window.__vcBootAt` e substitui o documento com `document.write` (sem iframe aninhado), mantendo header fixo, âncoras e rolagem única. A variante external não resolve sozinha o limite porque o HTML ainda tem ~54 KB.
 
@@ -120,12 +122,12 @@ git commit -m "build: loader da intro"
 git push origin main
 
 # 3) Nova tag/release (nunca mover as existentes)
-git tag -a v1.0.3 -m "v1.0.3"
-git push origin v1.0.3
-gh release create v1.0.3 --verify-tag --title "v1.0.3" --notes "Intro de carregamento com a marca VetCasa."
+git tag -a v1.0.4 -m "v1.0.4"
+git push origin v1.0.4
+gh release create v1.0.4 --verify-tag --title "v1.0.4" --notes "Intro de carregamento com a marca VetCasa."
 ```
 
-> O repositório, as tags `v1.0.0`/`v1.0.2` e a release `v1.0.0` já existem. A `v1.0.3` marca o build com a intro. O loader usa o commit da página (não a tag) porque o jsDelivr ainda pode estar indexando.
+> O repositório, as tags `v1.0.0`/`v1.0.2` e a release `v1.0.0` já existem. A `v1.0.4` marca o build com a intro. O loader usa o commit da página (não a tag) porque o jsDelivr ainda pode estar indexando.
 
 - O `dist/` é **commitado** (o jsDelivr serve os arquivos da tag).
 - Qualquer alteração exige **nova tag** (`v1.0.1`, ...). Nunca mover, apagar ou reutilizar uma tag.
@@ -142,9 +144,9 @@ Get-Content dist/manifest.json | ConvertFrom-Json | ForEach-Object { $_.files } 
 2. Na engrenagem da página, use **“Ocultar título da página”** (se existir).
 3. Em **Tema**, escolha o cabeçalho mínimo/sem banner e remova logo. Em **Configurações → Navegação** (ou **Tema → Navegação**), oculte a navegação nativa. Os rótulos mudam por versão; confira no editor.
 4. **Inserir → Incorporar → aba “Incorporar código”**.
-   - **Use agora:** cole `dist/embed.html` (~3,5 KB). Ele mostra a marca VetCasa enquanto busca a página, depois o boot completo (badge, anel, pontinhos) e o site.
+   - **Use agora:** cole `dist/embed.html` (~3,8 KB). Ele mostra a marca VetCasa enquanto busca a página, depois o boot completo (badge, anel, pontinhos) e o site.
    - **Alternativa:** cole `dist/index.html` (224 KB) se o campo aceitar.
-   - **Depois que a tag indexar:** uma nova tag/build com `@v1.0.3` pode substituir o loader; o commit atual continua funcionando.
+   - **Depois que a tag indexar:** uma nova tag/build com `@v1.0.4` pode substituir o loader; o commit atual continua funcionando.
 5. Selecione o bloco e arraste as alças até as quatro bordas; use **Largura total** na seção, se aparecer; estique a altura ao máximo. Não há garantia de “embed em página inteira” para código — é manual.
 6. Apague todos os outros blocos/seções: a página deve conter **somente** o embed, para não criar rolagem dupla.
 7. **Publicar → “Qualquer pessoa”** e abra a URL publicada (não valide só no editor).
@@ -175,8 +177,8 @@ Get-Content dist/manifest.json | ConvertFrom-Json | ForEach-Object { $_.files } 
 ## PENDENTE
 
 - [x] Login realizado e `OWNER` confirmado (`MLCodeSolutions`).
-- [x] Repositório público criado, `main` e tags `v1.0.0`/`v1.0.2`/`v1.0.3` enviadas.
-- [ ] Aguardar o jsDelivr indexar `@v1.0.3` (ou `@v1.0.0`); depois um novo build com a tag pode substituir o loader por commit. O commit atual continua funcionando.
+- [x] Repositório público criado, `main` e tags `v1.0.0`/`v1.0.2`/`v1.0.4` enviadas.
+- [ ] Aguardar o jsDelivr indexar `@v1.0.4` (ou `@v1.0.0`); depois um novo build com a tag pode substituir o loader por commit. O commit atual continua funcionando.
 - [ ] Substituir contatos fictícios (`5511912345678`, `contato@vetcasa.com.br`, `@vetcasa.demo`) por dados reais, se for produção.
 - [ ] Vídeos: não há arquivos. Manter placeholders ou informar IDs do YouTube (aí liberar `frame-src https://www.youtube-nocookie.com`).
 - [ ] Fotos reais: nenhuma; pipeline WebP 600/1200 só se entrarem.
@@ -186,9 +188,9 @@ Get-Content dist/manifest.json | ConvertFrom-Json | ForEach-Object { $_.files } 
 
 ## Riscos e limites
 
-- **Limite do campo:** 224,0 KB inline pode ser recusado; o fallback é `embed.html` (~3,5 KB). Teste a colagem.
+- **Limite do campo:** 224,3 KB inline pode ser recusado; o fallback é `embed.html` (~3,8 KB). Teste a colagem.
 - **Sandbox do Sites:** `fetch`/`document.write` precisam ser validados nos três navegadores; se bloquearem, use a variante que o campo aceitar.
-- **jsDelivr (tag):** as tags `v1.0.0`/`v1.0.3` podem continuar 404 no CDN. A página atual usa o commit `ca99ce8...` e os assets o commit `a930cdc...`; o loader também usa o commit da página. Arquivos >20 MB não são suportados (nenhum aqui chega perto; vídeos são 0).
+- **jsDelivr (tag):** as tags `v1.0.0`/`v1.0.4` podem continuar 404 no CDN. A página atual usa o commit `ca99ce8...` e os assets o commit `a930cdc...`; o loader também usa o commit da página. Arquivos >20 MB não são suportados (nenhum aqui chega perto; vídeos são 0).
 - **Tempo da intro:** o loader mostra a marca durante o fetch e o boot completo por ~1 s após o `document.write` (graças a `window.__vcBootAt`). Em 3G, o total até o site pode passar de 2 s.
 - **Rolagem dupla** em telas curtas por altura fixa do bloco.
 - **OneDrive + git:** locks eventuais; prefira uma cópia local fora do OneDrive se possível.
@@ -211,7 +213,8 @@ Get-Content dist/manifest.json | ConvertFrom-Json | ForEach-Object { $_.files } 
 - [x] Hero só digita/contadores só animam depois de `site:ready` (ou 3 s).
 - [x] Loader mostra a marca durante o fetch e a intro completa por ~1 s após o `document.write` (testado 390 px).
 - [x] `prefers-reduced-motion` e modo leve (`is-lite`) funcionando.
+- [x] Efeitos restaurados em celulares normais: reveal/marquee/digitação ativos; o hero entra depois do boot; a intro anima no celular; lite só com saveData/2G.
 - [x] Links externos com `rel="noopener noreferrer"`; `safeUrl()` ativo.
 - [x] PDFs abrem em nova aba (200 OK no servidor local).
 - [ ] Teste em celular real (iOS Safari + Android Chrome) na URL publicada.
-- [x] Tag `v1.0.0` publicada e imutável (release criada), com `v1.0.2`/`v1.0.3` para o fallback por commit e a nova intro.
+- [x] Tag `v1.0.0` publicada e imutável (release criada), com `v1.0.2`/`v1.0.4` para o fallback por commit e a nova intro.
